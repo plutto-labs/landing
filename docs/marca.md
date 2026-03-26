@@ -12,7 +12,7 @@ Stack: HTML estático + Tailwind CSS CDN + Inter (Google Fonts) + Cloudflare Pag
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
-    darkMode: 'media',
+    // darkMode deshabilitado por ahora — no usar clases dark:
     theme: {
       extend: {
         colors: {

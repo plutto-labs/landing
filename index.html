@@ -61,45 +61,89 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/custom.css">
+
+  <!-- Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Plutto",
+    "url": "https://getplutto.com",
+    "logo": "https://getplutto.com/assets/img/og-image.png",
+    "description": "Plataforma API de KYB y due diligence automatizado para Latinoamérica.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hola@getplutto.com",
+      "contactType": "sales"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Plutto",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Verificación de empresas y due diligence automatizado para LATAM. API de KYB con fuentes oficiales en tiempo real.",
+    "url": "https://getplutto.com",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Demo gratuita disponible"
+    }
+  }
+  </script>
 </head>
 <body class="font-sans text-gray-900 bg-white antialiased">
 
   <!-- NAV -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="/" class="text-xl font-bold tracking-tight text-gray-900">Plutto</a>
-
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#features" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Producto</a>
-        <a href="#social-proof" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Clientes</a>
-        <a href="#cta" class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-plutto-600 hover:bg-plutto-700 rounded-lg transition-colors">Agenda una demo</a>
-      </div>
-
-      <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600" aria-label="Abrir menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-      </button>
-    </nav>
-
-    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white">
-      <div class="px-4 py-4 space-y-3">
-        <a href="#features" class="block text-sm font-medium text-gray-600">Producto</a>
-        <a href="#social-proof" class="block text-sm font-medium text-gray-600">Clientes</a>
-        <a href="#cta" class="block w-full text-center px-4 py-2 text-sm font-semibold text-white bg-plutto-600 rounded-lg">Agenda una demo</a>
+  <nav class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2">
+          <span class="text-xl font-bold tracking-tight text-gray-900">Plutto</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/soluciones/due-diligence-proveedores" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Soluciones</a>
+          <a href="/conceptos/que-es-kyb" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Conceptos</a>
+          <a href="/preguntas-frecuentes" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
+          <a href="/blog" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Blog</a>
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+          <a href="https://app.getplutto.com/login" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Iniciar sesión</a>
+          <a href="/demo" class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-plutto-600 hover:bg-plutto-700 rounded-lg transition-colors">Agendar demo</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-gray-900" aria-label="Menú">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
       </div>
     </div>
-  </header>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white">
+      <div class="px-4 py-4 space-y-3">
+        <a href="/soluciones/due-diligence-proveedores" class="block text-sm font-medium text-gray-600">Soluciones</a>
+        <a href="/conceptos/que-es-kyb" class="block text-sm font-medium text-gray-600">Conceptos</a>
+        <a href="/preguntas-frecuentes" class="block text-sm font-medium text-gray-600">FAQ</a>
+        <a href="/blog" class="block text-sm font-medium text-gray-600">Blog</a>
+        <hr class="border-gray-200">
+        <a href="https://app.getplutto.com/login" class="block text-sm font-medium text-gray-600">Iniciar sesión</a>
+        <a href="/demo" class="block text-center px-4 py-2 text-sm font-semibold text-white bg-plutto-600 rounded-lg">Agendar demo</a>
+      </div>
+    </div>
+  </nav>
 
   <!-- HERO -->
   <section class="pt-32 pb-20 sm:pt-40 sm:pb-28">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 data-animate class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
-        Verificacion de empresas y due diligence automatizado para LATAM
+        Verificación de empresas y due diligence automatizado para LATAM
       </h1>
       <p data-animate class="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-        Plutto centraliza fuentes oficiales de toda Latinoamerica en una sola API. Verifica empresas, identifica beneficiarios finales y automatiza tu compliance en tiempo real.
+        Plutto centraliza fuentes oficiales de toda Latinoamérica en una sola API. Verifica empresas, identifica beneficiarios finales y automatiza tu compliance en tiempo real.
       </p>
       <div data-animate class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
         <a href="#cta" class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-plutto-600 hover:bg-plutto-700 rounded-lg transition-colors shadow-lg shadow-plutto-600/25">
@@ -117,7 +161,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 data-animate class="text-3xl sm:text-4xl font-bold text-gray-900">Todo lo que necesitas para verificar empresas</h2>
-        <p data-animate class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Una plataforma completa de KYB y due diligence, diseñada para equipos de compliance en Latinoamerica.</p>
+        <p data-animate class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Una plataforma completa de KYB y due diligence, diseñada para equipos de compliance en Latinoamérica.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
@@ -127,8 +171,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Verificacion en tiempo real</h3>
-          <p class="text-gray-600">Consulta fuentes oficiales de multiples paises de LATAM al instante. Sin esperar dias por resultados manuales.</p>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Verificación en tiempo real</h3>
+          <p class="text-gray-600">Consulta fuentes oficiales de múltiples países de LATAM al instante. Sin esperar días por resultados manuales.</p>
         </div>
 
         <div data-animate class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
@@ -148,7 +192,7 @@
             </svg>
           </div>
           <h3 class="text-xl font-semibold text-gray-900 mb-3">API-first, hecho para LATAM</h3>
-          <p class="text-gray-600">Documentacion en español, cobertura nativa de fuentes latinoamericanas y pricing adaptado a la region.</p>
+          <p class="text-gray-600">Documentación en español, cobertura nativa de fuentes latinoamericanas y pricing adaptado a la región.</p>
         </div>
       </div>
     </div>
@@ -157,7 +201,7 @@
   <!-- SOCIAL PROOF -->
   <section id="social-proof" class="py-20">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p data-animate class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-10">Empresas que confian en Plutto</p>
+      <p data-animate class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-10">Empresas que confían en Plutto</p>
       <div data-animate class="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
         <!-- Reemplazar con logos reales de clientes en assets/img/logos/ -->
         <div class="h-8 w-24 bg-gray-200 rounded"></div>
@@ -183,14 +227,38 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-12 border-t border-gray-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        <a href="/" class="text-lg font-bold text-gray-900">Plutto</a>
-        <div class="flex items-center gap-6 text-sm text-gray-500">
-          <a href="mailto:hola@getplutto.com" class="hover:text-gray-900 transition-colors">Contacto</a>
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="col-span-2 md:col-span-1">
+          <span class="text-lg font-bold text-white">Plutto</span>
+          <p class="mt-4 text-sm text-gray-500">Verificación de empresas automatizada para equipos de compliance.</p>
         </div>
-        <p class="text-sm text-gray-400">&copy; 2026 Plutto. Todos los derechos reservados.</p>
+        <div>
+          <p class="text-sm font-semibold text-white mb-4">Soluciones</p>
+          <ul class="space-y-2">
+            <li><a href="/soluciones/due-diligence-proveedores" class="text-sm hover:text-white transition-colors">Due Diligence</a></li>
+            <li><a href="/soluciones/compliance-proveedores" class="text-sm hover:text-white transition-colors">Compliance</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-white mb-4">Recursos</p>
+          <ul class="space-y-2">
+            <li><a href="/conceptos/que-es-kyb" class="text-sm hover:text-white transition-colors">Conceptos</a></li>
+            <li><a href="/blog" class="text-sm hover:text-white transition-colors">Blog</a></li>
+            <li><a href="/preguntas-frecuentes" class="text-sm hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-white mb-4">Empresa</p>
+          <ul class="space-y-2">
+            <li><a href="/demo" class="text-sm hover:text-white transition-colors">Agendar demo</a></li>
+            <li><a href="https://app.getplutto.com/login" class="text-sm hover:text-white transition-colors">Iniciar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+        <p class="text-sm text-gray-500">&copy; 2026 Plutto. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>

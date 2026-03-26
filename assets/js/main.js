@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const iconClose = document.getElementById('menu-icon-close');
 
   btn?.addEventListener('click', () => {
-    const open = menu.classList.toggle('hidden');
-    iconOpen.classList.toggle('hidden', !open);
-    iconClose.classList.toggle('hidden', open);
+    const isHidden = menu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden', !isHidden);
+    iconClose.classList.toggle('hidden', isHidden);
   });
 
   menu?.querySelectorAll('a').forEach(link => {

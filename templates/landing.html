@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[META_TITLE — 50-60 chars, keyword al inicio] | Plutto</title>
+  <meta name="description" content="[META_DESCRIPTION — 120-158 chars con CTA]">
+  <link rel="canonical" href="https://getplutto.com/[RUTA]">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://getplutto.com/[RUTA]">
+  <meta property="og:title" content="[META_TITLE] | Plutto">
+  <meta property="og:description" content="[META_DESCRIPTION]">
+  <meta property="og:image" content="https://getplutto.com/assets/img/og/[SLUG].png">
+  <meta property="og:site_name" content="Plutto">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[META_TITLE] | Plutto">
+  <meta name="twitter:description" content="[META_DESCRIPTION]">
+  <meta name="twitter:image" content="https://getplutto.com/assets/img/og/[SLUG].png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            plutto: {
+              50:  '#eef0ff',
+              100: '#e0e3ff',
+              200: '#c7ccff',
+              300: '#a4a8ff',
+              400: '#7a72ff',
+              500: '#5a4fff',
+              600: '#3d3bf3',
+              700: '#3530d6',
+              800: '#2b28ab',
+              900: '#282787',
+              950: '#18164f',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/custom.css">
+
+  <!-- Schema JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://getplutto.com/" },
+      { "@type": "ListItem", "position": 2, "name": "[SECCIÓN]", "item": "https://getplutto.com/[SECCIÓN_SLUG]/" },
+      { "@type": "ListItem", "position": 3, "name": "[PÁGINA]", "item": "https://getplutto.com/[RUTA]" }
+    ]
+  }
+  </script>
+
+  <!-- Schema JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Plutto",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://getplutto.com",
+    "description": "[DESCRIPCIÓN_SOLUCIÓN]",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Demo gratuita disponible"
+    }
+  }
+  </script>
+
+  <!-- Schema JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "[PREGUNTA_1]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[RESPUESTA_1]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[PREGUNTA_2]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[RESPUESTA_2]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[PREGUNTA_3]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[RESPUESTA_3]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[PREGUNTA_4]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[RESPUESTA_4]" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2">
+          <span class="text-xl font-bold tracking-tight text-gray-900">Plutto</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/soluciones/due-diligence-proveedores" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Soluciones</a>
+          <a href="/conceptos/que-es-kyb" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Conceptos</a>
+          <a href="/preguntas-frecuentes" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
+          <a href="/blog" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Blog</a>
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+          <a href="https://app.getplutto.com/login" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Iniciar sesión</a>
+          <a href="/demo" class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-plutto-600 hover:bg-plutto-700 rounded-lg transition-colors">Agendar demo</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-gray-900" aria-label="Menú">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white">
+      <div class="px-4 py-4 space-y-3">
+        <a href="/soluciones/due-diligence-proveedores" class="block text-sm font-medium text-gray-600">Soluciones</a>
+        <a href="/conceptos/que-es-kyb" class="block text-sm font-medium text-gray-600">Conceptos</a>
+        <a href="/preguntas-frecuentes" class="block text-sm font-medium text-gray-600">FAQ</a>
+        <a href="/blog" class="block text-sm font-medium text-gray-600">Blog</a>
+        <hr class="border-gray-200">
+        <a href="https://app.getplutto.com/login" class="block text-sm font-medium text-gray-600">Iniciar sesión</a>
+        <a href="/demo" class="block text-center px-4 py-2 text-sm font-semibold text-white bg-plutto-600 rounded-lg">Agendar demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMBS -->
+  <nav aria-label="Breadcrumb" class="pt-24 pb-4">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ol class="flex items-center gap-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-gray-900 transition-colors">Inicio</a></li>
+        <li><span class="text-gray-300">/</span></li>
+        <li><a href="/[SECCIÓN_SLUG]" class="hover:text-gray-900 transition-colors">[SECCIÓN]</a></li>
+        <li><span class="text-gray-300">/</span></li>
+        <li class="text-gray-900 font-medium">[PÁGINA]</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pb-20 sm:pb-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-widest text-plutto-600 mb-4">[KICKER]</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">[TÍTULO_H1 — keyword + valor, máx 8 palabras]</h1>
+          <p class="mt-6 text-lg sm:text-xl text-gray-600 max-w-xl">[SUBTÍTULO — 40-60 palabras, respuesta directa AEO]</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="/demo" class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-plutto-600 hover:bg-plutto-700 rounded-lg transition-colors shadow-lg shadow-plutto-600/25">[CTA_PRIMARIO]</a>
+            <a href="#como-funciona" class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">[CTA_SECUNDARIO]</a>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="/assets/img/[SLUG]-hero.webp" alt="[ALT_DESCRIPTIVO]" class="rounded-2xl shadow-2xl" width="600" height="400" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA DE LOGOS -->
+  <section class="py-12 border-y border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-widest text-gray-500 text-center mb-8">Empresas que confían en Plutto</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+        <img src="/assets/img/logos/[CLIENTE_1].svg" alt="[Cliente 1]" class="h-8 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" loading="lazy" width="120" height="32">
+        <img src="/assets/img/logos/[CLIENTE_2].svg" alt="[Cliente 2]" class="h-8 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" loading="lazy" width="120" height="32">
+        <img src="/assets/img/logos/[CLIENTE_3].svg" alt="[Cliente 3]" class="h-8 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" loading="lazy" width="120" height="32">
+        <img src="/assets/img/logos/[CLIENTE_4].svg" alt="[Cliente 4]" class="h-8 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" loading="lazy" width="120" height="32">
+        <img src="/assets/img/logos/[CLIENTE_5].svg" alt="[Cliente 5]" class="h-8 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" loading="lazy" width="120" height="32">
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 data-animate class="text-3xl sm:text-4xl font-bold text-gray-900">[TÍTULO_PROBLEMA]</h2>
+        <p data-animate class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">[INTRO_PROBLEMA — 40-60 palabras]</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div data-animate class="text-center p-8">
+          <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">[PAIN_1_TÍTULO]</h3>
+          <p class="text-gray-600">[PAIN_1_DESCRIPCIÓN]</p>
+        </div>
+        <div data-animate class="text-center p-8">
+          <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">[PAIN_2_TÍTULO]</h3>
+          <p class="text-gray-600">[PAIN_2_DESCRIPCIÓN]</p>
+        </div>
+        <div data-animate class="text-center p-8">
+          <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">[PAIN_3_TÍTULO]</h3>
+          <p class="text-gray-600">[PAIN_3_DESCRIPCIÓN]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES / SOLUCIÓN -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 data-animate class="text-3xl sm:text-4xl font-bold text-gray-900">[TÍTULO_SOLUCIÓN]</h2>
+        <p data-animate class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">[INTRO_SOLUCIÓN — 40-60 palabras]</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div data-animate class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+          <div class="w-12 h-12 bg-plutto-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-plutto-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><!-- [ICONO_1] --></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">[FEATURE_1_TÍTULO]</h3>
+          <p class="text-gray-600">[FEATURE_1_BENEFICIO]</p>
+        </div>
+        <div data-animate class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+          <div class="w-12 h-12 bg-plutto-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-plutto-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><!-- [ICONO_2] --></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">[FEATURE_2_TÍTULO]</h3>
+          <p class="text-gray-600">[FEATURE_2_BENEFICIO]</p>
+        </div>
+        <div data-animate class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+          <div class="w-12 h-12 bg-plutto-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-plutto-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><!-- [ICONO_3] --></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">[FEATURE_3_TÍTULO]</h3>
+          <p class="text-gray-600">[FEATURE_3_BENEFICIO]</p>
+        </div>
+        <div data-animate class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+          <div class="w-12 h-12 bg-plutto-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-plutto-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><!-- [ICONO_4] --></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">[FEATURE_4_TÍTULO]</h3>
+          <p class="text-gray-600">[FEATURE_4_BENEFICIO]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS / ROI -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 data-animate class="text-3xl sm:text-4xl font-bold text-gray-900">[TÍTULO_STATS]</h2>
+        <p data-animate class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">[INTRO_STATS — 40-60 palabras]</p>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div data-animate class="text-center">
+          <p class="text-4xl sm:text-5xl font-bold text-plutto-600">[STAT_1_NÚMERO]</p>
+          <p class="mt-2 text-sm font-medium text-gray-600">[STAT_1_DESCRIPCIÓN]</p>
+        </div>
+        <div data-animate class="text-center">
+          <p class="text-4xl sm:text-5xl font-bold text-plutto-600">[STAT_2_NÚMERO]</p>
+          <p class="mt-2 text-sm font-medium text-gray-600">[STAT_2_DESCRIPCIÓN]</p>
+        </div>
+        <div data-animate class="text-center">
+          <p class="text-4xl sm:text-5xl font-bold text-plutto-600">[STAT_3_NÚMERO]</p>
+          <p class="mt-2 text-sm font-medium text-gray-600">[STAT_3_DESCRIPCIÓN]</p>
+        </div>
+        <div data-animate class="text-center">
+          <p class="text-4xl sm:text-5xl font-bold text-plutto-600">[STAT_4_NÚMERO]</p>
+          <p class="mt-2 text-sm font-medium text-gray-600">[STAT_4_DESCRIPCIÓN]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div data-animate class="bg-white rounded-2xl p-8 sm:p-12 shadow-sm border border-gray-200 text-center">
+        <blockquote>
+          <p class="text-lg sm:text-xl text-gray-900 italic">"[CITA_CLIENTE]"</p>
+        </blockquote>
+        <div class="mt-8 flex items-center justify-center gap-4">
+          <img src="/assets/img/testimonials/[NOMBRE_SLUG].webp" alt="[NOMBRE_COMPLETO]" class="w-12 h-12 rounded-full" loading="lazy" width="48" height="48">
+          <div class="text-left">
+            <p class="text-sm font-semibold text-gray-900">[NOMBRE_COMPLETO]</p>
+            <p class="text-sm text-gray-600">[CARGO], [EMPRESA]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-funciona" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 data-animate class="text-3xl sm:text-4xl font-bold text-gray-900">Cómo funciona</h2>
+        <p data-animate class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">[INTRO_PASOS — 40-60 palabras]</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div data-animate class="text-center">
+          <div class="w-10 h-10 bg-plutto-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">1</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">[PASO_1_TÍTULO]</h3>
+          <p class="text-gray-600">[PASO_1_DESCRIPCIÓN]</p>
+        </div>
+        <div data-animate class="text-center">
+          <div class="w-10 h-10 bg-plutto-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">2</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">[PASO_2_TÍTULO]</h3>
+          <p class="text-gray-600">[PASO_2_DESCRIPCIÓN]</p>
+        </div>
+        <div data-animate class="text-center">
+          <div class="w-10 h-10 bg-plutto-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">3</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">[PASO_3_TÍTULO]</h3>
+          <p class="text-gray-600">[PASO_3_DESCRIPCIÓN]</p>
+        </div>
+        <div data-animate class="text-center">
+          <div class="w-10 h-10 bg-plutto-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">4</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">[PASO_4_TÍTULO]</h3>
+          <p class="text-gray-600">[PASO_4_DESCRIPCIÓN]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 data-animate class="text-3xl sm:text-4xl font-bold text-gray-900">Preguntas frecuentes</h2>
+      </div>
+      <div class="space-y-4">
+        <details data-animate class="group bg-white rounded-2xl border border-gray-200 shadow-sm">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">[PREGUNTA_1]</h3>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600"><p>[RESPUESTA_1]</p></div>
+        </details>
+        <details data-animate class="group bg-white rounded-2xl border border-gray-200 shadow-sm">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">[PREGUNTA_2]</h3>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600"><p>[RESPUESTA_2]</p></div>
+        </details>
+        <details data-animate class="group bg-white rounded-2xl border border-gray-200 shadow-sm">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">[PREGUNTA_3]</h3>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600"><p>[RESPUESTA_3]</p></div>
+        </details>
+        <details data-animate class="group bg-white rounded-2xl border border-gray-200 shadow-sm">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">[PREGUNTA_4]</h3>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600"><p>[RESPUESTA_4]</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-20 bg-plutto-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 data-animate class="text-3xl sm:text-4xl font-bold text-white">[TÍTULO_CTA]</h2>
+      <p data-animate class="mt-4 text-lg text-plutto-100 max-w-2xl mx-auto">[SUBTÍTULO_CTA]</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/demo" class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-plutto-600 bg-white hover:bg-plutto-50 rounded-lg transition-colors shadow-lg">Agendar demo</a>
+        <a href="https://app.getplutto.com/login" class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border border-white/30 hover:bg-white/10 rounded-lg transition-colors">Iniciar sesión</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="col-span-2 md:col-span-1">
+          <span class="text-lg font-bold text-white">Plutto</span>
+          <p class="mt-4 text-sm text-gray-500">Verificación de empresas automatizada para equipos de compliance.</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-white mb-4">Soluciones</p>
+          <ul class="space-y-2">
+            <li><a href="/soluciones/due-diligence-proveedores" class="text-sm hover:text-white transition-colors">Due Diligence</a></li>
+            <li><a href="/soluciones/compliance-proveedores" class="text-sm hover:text-white transition-colors">Compliance</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-white mb-4">Recursos</p>
+          <ul class="space-y-2">
+            <li><a href="/conceptos/que-es-kyb" class="text-sm hover:text-white transition-colors">Conceptos</a></li>
+            <li><a href="/blog" class="text-sm hover:text-white transition-colors">Blog</a></li>
+            <li><a href="/preguntas-frecuentes" class="text-sm hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-white mb-4">Empresa</p>
+          <ul class="space-y-2">
+            <li><a href="/demo" class="text-sm hover:text-white transition-colors">Agendar demo</a></li>
+            <li><a href="https://app.getplutto.com/login" class="text-sm hover:text-white transition-colors">Iniciar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+        <p class="text-sm text-gray-500">&copy; 2026 Plutto. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CTA STICKY MOBILE -->
+  <div class="fixed bottom-0 inset-x-0 z-40 md:hidden bg-white border-t border-gray-200 p-3">
+    <a href="/demo" class="flex items-center justify-center w-full px-6 py-3 text-base font-semibold text-white bg-plutto-600 hover:bg-plutto-700 rounded-lg transition-colors shadow-lg shadow-plutto-600/25">Agendar demo</a>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

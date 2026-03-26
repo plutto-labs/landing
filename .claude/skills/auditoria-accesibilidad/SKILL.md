@@ -1,3 +1,8 @@
+---
+name: auditoria-accesibilidad
+description: Realiza una auditoría de accesibilidad WCAG 2.1 nivel AA en todo el sitio.
+---
+
 Realiza una auditoría de accesibilidad WCAG 2.1 nivel AA en todo el sitio.
 
 ## Pasos

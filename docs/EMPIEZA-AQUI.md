@@ -30,6 +30,19 @@ npx serve .
 ```
 Abre `http://localhost:3000` en el navegador. Cada vez que Claude edite un archivo, refresca para ver los cambios.
 
+### Subir assets obligatorios
+
+Antes de publicar, asegúrate de que estos archivos existan en `assets/img/`:
+
+| Archivo | Qué es | Tamaño recomendado |
+|---------|--------|--------------------|
+| `favicon.ico` | Ícono de pestaña del navegador | 32x32px |
+| `og-image.png` | Imagen al compartir en redes sociales | 1200x630px |
+
+Sin estos archivos, el sitio se ve sin ícono y las previews en redes muestran imagen rota.
+
+Para logos de clientes (sección social proof), agrégalos en `assets/img/logos/` en formato SVG o PNG.
+
 ### Verificar que funciona
 Escribe en Claude Code:
 > ¿Qué archivos hay en este repo?
@@ -46,9 +59,12 @@ Debería listar `index.html`, `assets/`, `docs/`, etc.
 2. Llena todos los campos marcados con `[LLENAR]`
 3. Abre Claude Code en el repo
 4. Pega el template llenado + las instrucciones de la sección "Prompt para Claude Code" del mismo archivo
-5. Claude genera el HTML -> refresca localhost:3000 -> revisa
-6. Pide correcciones: "El hero debería tener el texto a la izquierda" / "Cambia el subtítulo a..."
-7. Cuando estés conforme, publica (ver sección 3)
+5. Claude usa los templates HTML de `templates/` (landing o artículo) como base — no necesita armar desde cero
+6. Refresca localhost:3000 -> revisa
+7. Pide correcciones: "El hero debería tener el texto a la izquierda" / "Cambia el subtítulo a..."
+8. Cuando estés conforme, publica (ver sección 3)
+
+> **Tip:** Los templates HTML (`templates/landing.html` y `templates/articulo.html`) ya tienen toda la estructura, nav, footer, schemas y secciones pre-armadas. Esto hace que crear páginas sea mucho más rápido.
 
 ### Editar una página existente
 
@@ -69,6 +85,9 @@ O para una página específica:
 
 ## 3. Publicar Cambios
 
+**Opción recomendada:** Usa el skill `/publicar`. Valida automáticamente que todo esté correcto y publica por ti.
+
+**Opción manual (si prefieres):**
 ```bash
 git add .
 git commit -m "feat: crear landing due diligence proveedores"
@@ -99,14 +118,21 @@ Sigue el plan semanal en `docs/seo/plan-semanal.md`. Resumen:
 
 | Comando | Qué hace |
 |---------|----------|
-| `/auditoria-seo` | Revisa meta tags, headings, sitemap, keywords |
-| `/verificar-consistencia` | Verifica colores, fonts, spacing vs manual de marca |
-| `/mejorar-copy` | Sugiere mejoras de redacción |
+| **Flujo diario** | |
+| `/siguiente-tarea` | Te dice qué hacer a continuación según el plan SEO |
+| `/crear-articulo [título]` | Crea un artículo educativo optimizado para AI y Google |
 | `/nueva-pagina [nombre]` | Crea una página nueva desde template |
 | `/nueva-seccion [tipo] [página]` | Agrega sección a página existente |
-| `/crear-articulo [título]` | Crea un artículo para conceptos/ o blog/ |
+| `/publicar` | Valida todo y publica (no necesitas saber git) |
+| **Revisión y mejora** | |
+| `/auditoria-seo` | Revisa SEO + optimización para AI engines (AEO) |
+| `/verificar-consistencia` | Verifica colores, fonts, spacing vs manual de marca |
+| `/mejorar-copy` | Sugiere mejoras de redacción |
 | `/auditoria-accesibilidad` | Audita accesibilidad WCAG 2.1 AA |
 | `/revisar-rendimiento` | Revisa optimizaciones de rendimiento |
+| `/optimizar-imagenes` | Audita y corrige atributos de imágenes |
+| **Migración** | |
+| `/migrar-blog` | Migra artículos del subdomain blog a /blog/ |
 
 ---
 
@@ -115,6 +141,10 @@ Sigue el plan semanal en `docs/seo/plan-semanal.md`. Resumen:
 ```
 landing/
 ├── index.html              <- Homepage (editar directamente)
+├── templates/
+│   ├── base.html           <- Esqueleto HTML reutilizable (head, nav, footer)
+│   ├── landing.html        <- Template landing con todas las secciones
+│   └── articulo.html       <- Template artículo educativo (AEO optimizado)
 ├── demo.html               <- Formulario demo
 ├── mexico.html             <- Landing México
 ├── robots.txt              <- Reglas para crawlers

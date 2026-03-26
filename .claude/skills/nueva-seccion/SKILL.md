@@ -1,3 +1,9 @@
+---
+name: nueva-seccion
+description: Agrega una nueva sección a una página existente del sitio.
+argument-hint: "[tipo de seccion] [pagina destino]"
+---
+
 Agrega una nueva sección a una página existente del sitio.
 
 ## Argumentos: $ARGUMENTS
@@ -71,3 +77,6 @@ Sección de features con layout alternado (imagen + texto, texto + imagen).
 1. Mostrar preview del HTML que se va a insertar
 2. Indicar entre qué secciones se insertará
 3. Pedir confirmación antes de aplicar el cambio
+
+## Siguiente paso
+"Sección agregada. Ejecuta `/verificar-consistencia` para validar marca y luego `/publicar` para desplegar."

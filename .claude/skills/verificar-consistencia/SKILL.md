@@ -1,3 +1,8 @@
+---
+name: verificar-consistencia
+description: Realiza una auditoría de consistencia de marca en todo el sitio. Lee `docs/marca.md` para obtener las guías de marca oficiales.
+---
+
 Realiza una auditoría de consistencia de marca en todo el sitio. Lee `docs/marca.md` para obtener las guías de marca oficiales.
 
 ## Pasos
@@ -59,3 +64,6 @@ Presenta los resultados agrupados por categoría con:
 - ⚠️ Advertencia
 
 Si encuentras inconsistencias, pregunta si quiero que las corrija automáticamente.
+
+## Siguiente paso
+"Para publicar las correcciones: `/publicar`"
