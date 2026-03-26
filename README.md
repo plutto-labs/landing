@@ -2,16 +2,14 @@
 
 Landing page estática para [getplutto.com](https://getplutto.com). Deploy automático en Cloudflare Pages.
 
+## Para marketing: empieza aquí
+
+**Si eres parte del equipo de marketing, lee [`docs/EMPIEZA-AQUI.md`](docs/EMPIEZA-AQUI.md)** - tiene todo lo que necesitas para crear y editar páginas con Claude Code.
+
 ## Desarrollo local
 
-No requiere instalación. Abre `index.html` directamente en el browser, o levanta un server local:
-
 ```bash
-# Opción 1
 npx serve .
-
-# Opción 2
-python3 -m http.server 8000
 ```
 
 ## Deploy
@@ -24,34 +22,32 @@ git commit -m "update: descripción del cambio"
 git push
 ```
 
-Dashboard de Cloudflare Pages: https://dash.cloudflare.com → Pages → plutto-landing
-
-## Convenciones
-
-- **Editar contenido**: modificar directamente los archivos `.html`. Cada sección está marcada con comentarios (`<!-- HERO -->`, `<!-- FEATURES -->`, etc.).
-- **Imágenes**: guardar en `assets/img/` y referenciar con ruta relativa.
-- **Nueva página**: copiar `index.html` como template, modificar contenido, y agregar link en el nav.
-- **Estilos custom**: usar clases de Tailwind en el HTML. Solo agregar CSS custom en `assets/css/custom.css` si es estrictamente necesario.
+Dashboard: https://dash.cloudflare.com → Pages → plutto-landing
 
 ## Comandos de Claude Code
-
-Este repositorio incluye comandos personalizados para Claude Code que facilitan el mantenimiento del landing sin necesidad de conocimientos técnicos:
 
 | Comando | Qué hace |
 |---------|----------|
 | `/auditoria-seo` | Revisa meta tags, headings, sitemap y keywords SEO |
-| `/verificar-consistencia` | Verifica que colores, fonts y spacing sigan el manual de marca |
+| `/verificar-consistencia` | Verifica colores, fonts y spacing vs manual de marca |
 | `/mejorar-copy` | Sugiere mejoras de redacción y copy |
 | `/auditoria-accesibilidad` | Audita accesibilidad WCAG 2.1 AA |
 | `/nueva-pagina` | Crea una página nueva desde template |
-| `/nueva-seccion` | Agrega una sección nueva a una página existente |
+| `/nueva-seccion` | Agrega una sección a una página existente |
+| `/crear-articulo` | Crea artículo para conceptos/ o blog/ |
 | `/revisar-rendimiento` | Revisa optimizaciones de rendimiento |
 
 ## Documentación
 
-- **`CLAUDE.md`** — Guía operativa del repositorio (Claude Code lo lee automáticamente)
-- **`docs/plutto.md`** — Contexto del producto y palabras clave SEO
-- **`docs/marca.md`** — Manual de marca (colores, tipografía, tono de voz, componentes)
+| Documento | Contenido |
+|-----------|-----------|
+| [`docs/EMPIEZA-AQUI.md`](docs/EMPIEZA-AQUI.md) | Guía de inicio para marketing |
+| [`docs/plutto.md`](docs/plutto.md) | Contexto del producto y keywords SEO |
+| [`docs/marca.md`](docs/marca.md) | Design system (colores, componentes, schema, reglas) |
+| [`docs/seo/auditoria.md`](docs/seo/auditoria.md) | Diagnóstico SEO/AEO actual |
+| [`docs/seo/plan-semanal.md`](docs/seo/plan-semanal.md) | Plan de trabajo con tareas y briefs |
+| [`docs/seo/migracion.md`](docs/seo/migracion.md) | Plan migración Webflow → Cloudflare Pages |
+| [`docs/templates/brief-pagina.md`](docs/templates/brief-pagina.md) | Template para briefear páginas nuevas |
 
 ## Stack
 
