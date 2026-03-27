@@ -1,3 +1,9 @@
+---
+name: nueva-seccion
+description: Agrega una nueva sección a una página existente del sitio.
+argument-hint: "[tipo de seccion] [pagina destino]"
+---
+
 Agrega una nueva sección a una página existente del sitio.
 
 ## Argumentos: $ARGUMENTS
@@ -58,9 +64,9 @@ Sección de features con layout alternado (imagen + texto, texto + imagen).
 - Usar los patrones exactos de componentes de `docs/marca.md`
 - Contenedor: `max-w-6xl mx-auto px-4 sm:px-6 lg:px-8`
 - Padding de sección: `py-20`
-- Alternar fondo: si la sección anterior tiene fondo blanco, usar `bg-gray-50 dark:bg-gray-900` y viceversa
+- Alternar fondo: si la sección anterior tiene fondo blanco, usar `bg-gray-50` y viceversa
 - Incluir `data-animate` en todos los elementos visibles
-- Mantener paridad completa de dark mode
+- No usar clases dark: (sin dark mode por ahora)
 - Agregar comentario HTML identificando la sección (`<!-- TESTIMONIOS -->`, etc.)
 - Usar texto placeholder entre corchetes `[...]` para contenido que el usuario debe completar
 - Insertar antes del footer y después de la última sección de contenido
@@ -71,3 +77,6 @@ Sección de features con layout alternado (imagen + texto, texto + imagen).
 1. Mostrar preview del HTML que se va a insertar
 2. Indicar entre qué secciones se insertará
 3. Pedir confirmación antes de aplicar el cambio
+
+## Siguiente paso
+"Sección agregada. Ejecuta `/verificar-consistencia` para validar marca y luego `/publicar` para desplegar."

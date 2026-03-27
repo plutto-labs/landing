@@ -1,3 +1,9 @@
+---
+name: mejorar-copy
+description: Actúa como copywriter especializado en landing pages SaaS para el mercado latinoamericano. Tu objetivo es mejorar la redacción del sitio.
+argument-hint: "[seccion o archivo]"
+---
+
 Actúa como copywriter especializado en landing pages SaaS para el mercado latinoamericano. Tu objetivo es mejorar la redacción del sitio.
 
 Antes de empezar, lee:
@@ -39,3 +45,6 @@ Para cada mejora propuesta, muestra:
 - Si hay placeholders `[...]`, propón texto real basado en `docs/plutto.md`
 - Pide confirmación antes de aplicar cualquier cambio
 - Si el copy actual ya es bueno, dilo — no fuerces cambios innecesarios
+
+## Siguiente paso
+"Copy mejorado. Ejecuta `/auditoria-seo` para verificar keywords y luego `/publicar` para desplegar."

@@ -1,3 +1,8 @@
+---
+name: auditoria-accesibilidad
+description: Realiza una auditoría de accesibilidad WCAG 2.1 nivel AA en todo el sitio.
+---
+
 Realiza una auditoría de accesibilidad WCAG 2.1 nivel AA en todo el sitio.
 
 ## Pasos
@@ -28,10 +33,9 @@ Realiza una auditoría de accesibilidad WCAG 2.1 nivel AA en todo el sitio.
 
 ### Contraste de colores
 - [ ] Texto gray-600 (#4B5563) sobre white: ratio ≥ 4.5:1 ✓
-- [ ] Texto white sobre indigo-600 (#4F46E5): ratio ≥ 4.5:1 ✓
+- [ ] Texto white sobre plutto-600 (#3d3bf3): ratio ≥ 4.5:1 ✓
 - [ ] Texto gray-900 (#111827) sobre white: ratio ≥ 4.5:1 ✓
-- [ ] Texto gray-400 (#9CA3AF) sobre gray-950 (#030712) en dark mode: verificar ratio
-- [ ] Texto indigo-100 (#E0E7FF) sobre indigo-600: verificar ratio
+- [ ] Texto plutto-100 (#e0e3ff) sobre plutto-600: verificar ratio
 - [ ] Texto en botones cumple contraste mínimo
 
 ### Formularios (si aplica)

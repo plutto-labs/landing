@@ -1,3 +1,8 @@
+---
+name: auditoria-seo
+description: Realiza una auditoría SEO completa del sitio. Lee `docs/plutto.md` para obtener las palabras clave SEO objetivo.
+---
+
 Realiza una auditoría SEO completa del sitio. Lee `docs/plutto.md` para obtener las palabras clave SEO objetivo.
 
 ## Pasos
@@ -39,12 +44,25 @@ Para cada página HTML, revisa:
 ### Datos estructurados
 - [ ] JSON-LD (Schema.org) presente para Organization o WebSite
 - [ ] `<html lang="es">` configurado correctamente
+- [ ] Schema `BreadcrumbList` presente en páginas internas
+- [ ] Schema `FAQPage` presente si la página tiene sección FAQ
+- [ ] Schema `Article` presente en artículos de conceptos/ y blog/
+- [ ] Schema `SoftwareApplication` presente en páginas que describen el producto
 
 ### Contenido
 - [ ] No quedan placeholders `[...]` sin reemplazar
 - [ ] Palabras clave de `docs/plutto.md` aparecen naturalmente en el contenido
 - [ ] Links internos usan texto descriptivo (no "click aquí")
 - [ ] Links externos relevantes tienen `rel="noopener"`
+
+### Optimización AEO (AI Engine Optimization)
+- [ ] Cada sección H2 abre con párrafo de respuesta directa (40-60 palabras)
+- [ ] Existe TL;DR box o párrafo introductorio que responda la pregunta principal de la página
+- [ ] Sección FAQ con schema `FAQPage` presente (mínimo 3 preguntas)
+- [ ] Tablas comparativas usan `<table>` nativo (no divs con grid) — AI engines las parsean mejor
+- [ ] Contenido cita fuentes externas autoritativas (reguladores, organismos oficiales)
+- [ ] La página responde al menos 1 pregunta del listado de keywords en `docs/seo/auditoria.md`
+- [ ] Links internos a otros artículos/páginas del sitio (autoridad topical)
 
 ## Formato de salida
 
@@ -54,3 +72,7 @@ Presenta los resultados agrupados por categoría. Para cada item usa:
 - ⚠️ Advertencia (sugerencia de mejora)
 
 Al final, muestra un resumen con el puntaje total (items pasados / total) y las 3 acciones más importantes a tomar.
+
+## Siguiente paso
+- Para corregir problemas de copy: `/mejorar-copy [sección]`
+- Para publicar después de corregir: `/publicar`
