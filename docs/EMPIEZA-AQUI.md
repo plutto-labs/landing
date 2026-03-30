@@ -69,7 +69,7 @@ Debería listar `index.html`, `assets/`, `docs/`, etc.
 ### Editar una página existente
 
 En Claude Code:
-> Abre el archivo soluciones/due-diligence-proveedores.html y haz estos cambios:
+> Abre index.html y haz estos cambios:
 > - Cambia el H1 a "..."
 > - Agrega un testimonial de [nombre], [cargo], [empresa]: "[quote]"
 
@@ -145,23 +145,19 @@ landing/
 │   ├── base.html           <- Esqueleto HTML reutilizable (head, nav, footer)
 │   ├── landing.html        <- Template landing con todas las secciones
 │   └── articulo.html       <- Template artículo educativo (AEO optimizado)
-├── demo.html               <- Formulario demo
-├── mexico.html             <- Landing México
 ├── robots.txt              <- Reglas para crawlers
 ├── sitemap.xml             <- Mapa del sitio (actualizar con cada página nueva)
 ├── _headers                <- Security headers
-├── _redirects              <- Redirects 301
+├── _redirects              <- Redirects 301 (se llenan al crear páginas)
 ├── assets/
 │   ├── css/custom.css      <- Animaciones (no tocar)
 │   ├── js/main.js          <- Mobile menu + scroll (no tocar)
 │   └── img/                <- Imágenes (WebP preferido)
-│       ├── og/             <- Open Graph images (1200x630px)
-│       ├── logos/          <- Logos clientes (SVG)
-│       └── testimonials/   <- Fotos testimoniales (WebP)
-├── soluciones/             <- Landing pages por caso de uso
-├── conceptos/              <- Artículos educativos (glosario)
-├── industrias/             <- Landing pages por industria (futuro)
-├── blog/                   <- Blog (migrado de subdominio)
+│       └── logos/          <- Logos clientes (SVG)
+├── soluciones/             <- Por crear: landing pages por caso de uso
+├── conceptos/              <- Por crear: artículos educativos (glosario)
+├── industrias/             <- Por crear: landing pages por industria
+├── blog/                   <- Por crear: blog (migrado de subdominio)
 ├── docs/
 │   ├── EMPIEZA-AQUI.md     <- Este archivo
 │   ├── plutto.md           <- Contexto del producto y keywords SEO
@@ -172,7 +168,7 @@ landing/
 │   │   └── migracion.md    <- Plan migración Webflow -> Cloudflare Pages
 │   └── templates/
 │       └── brief-pagina.md <- Template para briefear páginas nuevas
-└── .claude/commands/       <- Comandos personalizados para Claude Code
+└── .claude/skills/         <- Skills personalizados para Claude Code
 ```
 
 ---

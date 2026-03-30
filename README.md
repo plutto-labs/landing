@@ -28,14 +28,19 @@ Dashboard: https://dash.cloudflare.com → Pages → plutto-landing
 
 | Comando | Qué hace |
 |---------|----------|
+| `/siguiente-tarea` | Te dice qué hacer a continuación según el plan SEO |
+| `/crear-articulo` | Crea artículo educativo con optimización AEO |
+| `/nueva-pagina` | Crea una página nueva desde template |
+| `/nueva-seccion` | Agrega una sección a una página existente |
+| `/publicar` | Valida todo y publica (checklist + git push) |
 | `/auditoria-seo` | Revisa meta tags, headings, sitemap y keywords SEO |
 | `/verificar-consistencia` | Verifica colores, fonts y spacing vs manual de marca |
 | `/mejorar-copy` | Sugiere mejoras de redacción y copy |
 | `/auditoria-accesibilidad` | Audita accesibilidad WCAG 2.1 AA |
-| `/nueva-pagina` | Crea una página nueva desde template |
-| `/nueva-seccion` | Agrega una sección a una página existente |
-| `/crear-articulo` | Crea artículo para conceptos/ o blog/ |
 | `/revisar-rendimiento` | Revisa optimizaciones de rendimiento |
+| `/optimizar-imagenes` | Audita y corrige atributos de imágenes |
+| `/migrar-blog` | Migra artículos del subdomain blog a /blog/ |
+| `/plutto-blog` | Escribe artículos del blog con pipeline anti-IA |
 
 ## Documentación
 
