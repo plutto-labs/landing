@@ -66,6 +66,7 @@ git push origin master
 | `/revisar-rendimiento` | Revisar rendimiento y optimizaciones del sitio |
 | `/optimizar-imagenes` | Auditar y corregir atributos de imágenes |
 | `/migrar-blog` | Migrar artículos del subdomain blog a /blog/ |
+| `/plutto-blog` | Escribir artículos del blog con pipeline anti-IA y voz auténtica |
 
 ## Reglas para el asistente
 
