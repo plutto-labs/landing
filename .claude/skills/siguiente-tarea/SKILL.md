@@ -1,79 +1,114 @@
 ---
 name: siguiente-tarea
-description: Te dice exactamente qué página o artículo crear a continuación según el plan SEO, y el comando para hacerlo.
+description: Te dice exactamente qué hacer a continuación según el estado de la migración y el plan SEO.
 ---
 
-Te dice qué tarea hacer a continuación según el plan SEO semanal y el estado actual del sitio.
+Determina la siguiente tarea a ejecutar leyendo el estado actual de la migración y respetando los gates de fase.
 
 ## Pasos
 
-### 1. Leer el plan y el estado actual
+### 1. Leer el estado de la migración
 
-Lee estos archivos:
-1. `docs/seo/plan-semanal.md` — el plan completo con todas las tareas
-2. `docs/seo/auditoria.md` — las 10 acciones de mayor ROI
+Lee `docs/seo/migracion.md` completo. Es la fuente de verdad.
 
-Escanea qué contenido ya existe:
-- `soluciones/*.html`
-- `conceptos/*.html`
-- `blog/*.html`
-- `industrias/*.html`
-- `index.html` (secciones existentes)
-- `sitemap.xml` (URLs publicadas)
+Para cada fase (0 al 5), determina su estado:
+- **Bloqueada** 🔴: tiene tareas en 🔴 Pendiente
+- **En progreso** 🟡: tiene mezcla de 🟡 y 🔴
+- **Completa** 🟢: todas las tareas en 🟢 Completado
 
-### 2. Cruzar plan vs realidad
+### 2. Identificar la fase activa
 
-Para cada tarea del plan, determina:
-- **Completada**: el archivo HTML existe y está en sitemap.xml
-- **Pendiente**: no existe aún
-- **En progreso**: el archivo existe pero tiene placeholders `[...]`
+La fase activa es la primera fase que NO está completa (🟢).
 
-### 3. Determinar la siguiente tarea
+### 3. Aplicar gate de fase
 
-Prioriza en este orden:
-1. Arreglos técnicos críticos del plan (lang, schema, OG tags del homepage)
-2. Artículos de mayor impacto SEO (los que tienen keywords sin competencia local)
-3. Landing pages de soluciones
-4. Contenido educativo (conceptos/)
-5. Páginas de industria
+**Gate estricto:** No se puede avanzar a la siguiente fase hasta completar la actual.
 
-### 4. Mostrar el resultado
+| Fase activa | Qué mostrar | Qué NO mostrar |
+|-------------|-------------|----------------|
+| Fase 0 | Tareas de Fase 0 (pedir brand-guide, referentes, definir diseño) | Nada de fases siguientes |
+| Fase 1 | Tareas de Fase 1 (templates, CSS) | Ninguna página de contenido |
+| Fase 2 | Tareas de Fase 2 (páginas base) | Landings SEO ni artículos |
+| Fase 3 | Tareas de Fase 3 + prioridad desde plan-semanal.md | Blog ni DNS |
+| Fase 4 | Tareas de Fase 4 (blog) | DNS cutover |
+| Fase 5 | Checklist pre-launch y DNS | — |
 
-Formato:
+**Excepción:** Las tareas de directorios (G2, Capterra, ComparaSoftware) son paralelas — siempre mostrarlas si están pendientes, sin importar la fase activa.
+
+### 4. Si la fase activa es 0 o 1 (diseño)
+
+Mostrar este mensaje especial:
 
 ```
-📊 Progreso del plan SEO
-════════════════════════
-Completado: 2/10 acciones prioritarias
+🚧 Gate activo: diseño no definido
+════════════════════════════════════
+Antes de crear cualquier página, necesitamos tener el diseño listo.
 
-✅ Arreglos técnicos homepage (lang, meta tags)
-✅ Artículo: Qué es KYB
-⬚ Artículo: KYC vs KYB diferencias
-⬚ Landing: Due diligence proveedores
-⬚ Perfil en G2 (requiere acción manual)
-⬚ Perfil en Capterra (requiere acción manual)
-⬚ Artículo: Regulaciones compliance Chile 2026
-⬚ Landing: Compliance proveedores
-⬚ Migración blog a /blog/
-⬚ Artículo: Onboarding digital empresas
+Estado de la migración:
+  Fase 0 — Definición Visual: [estado]
+  Fase 1 — Sistema de Diseño: [estado]
 
-═══════════════════════════════════════
-👉 Siguiente tarea: Crear artículo "KYC vs KYB: Diferencias clave"
+👉 Siguiente tarea: [primera tarea pendiente de la fase activa]
 
-   Keyword principal: "KYC vs KYB"
-   Impacto: Alto — sin competencia local en español
-   Ejecuta: /crear-articulo KYC vs KYB: Diferencias clave para empresas en Chile
+[Si Fase 0 activa]:
+  Necesito que me compartas:
+  1. El brand-guide en PDF (adjúntalo en el chat)
+  2. URLs o imágenes de sitios de referencia visual
 
-   Después de crear: /auditoria-seo → /publicar
+[Si Fase 1 activa]:
+  Tengo el diseño definido en docs/marca.md.
+  Ejecuta: /nueva-seccion [o el skill correspondiente]
 ```
 
-### 5. Si el usuario quiere otra tarea
+### 5. Si la fase activa es 2, 3, 4 o 5
 
-Si dice "ya lo hice" o "quiero otra", avanza a la siguiente tarea pendiente.
-Si dice "quiero elegir", muestra la lista completa de pendientes con el comando para cada una.
+Escanear qué archivos ya existen:
+- `index.html`, `demo.html`, `mexico.html`, `preguntas-frecuentes.html`
+- `soluciones/*.html`, `conceptos/*.html`, `blog/*.html`
+- `sitemap.xml` (para confirmar páginas publicadas)
+
+Cruzar contra las tareas pendientes en `migracion.md`.
+
+Para Fase 3: consultar `docs/seo/plan-semanal.md` para ordenar las páginas pendientes por prioridad SEO (keywords sin competencia local van primero).
+
+### 6. Mostrar el resultado
+
+```
+📊 Estado de la migración
+══════════════════════════════════════════
+
+  Fase 0 — Definición Visual:    🟢 Completa
+  Fase 1 — Sistema de Diseño:    🟢 Completa
+  Fase 2 — Páginas Base:         🟡 En progreso (3/7 completadas)
+  Fase 3 — Landings + Conceptos: 🔴 Pendiente
+  Fase 4 — Blog:                 🔴 Pendiente
+  Fase 5 — DNS Cutover:          🔴 Pendiente
+
+Paralelo (sin bloqueo de fase):
+  ⬚ Perfil en G2 — requiere acción manual
+  ⬚ Perfil en Capterra — requiere acción manual
+  ⬚ Perfil en ComparaSoftware — requiere acción manual
+
+══════════════════════════════════════════
+👉 Siguiente tarea (Fase 2): [nombre de tarea]
+
+   [Descripción breve de qué es y por qué]
+   Ejecuta: /nueva-pagina [o el comando exacto]
+
+   Después: /publicar
+```
+
+### 7. Si el usuario quiere otra tarea
+
+- "ya lo hice" → avanzar a la siguiente pendiente de la misma fase
+- "quiero elegir" → mostrar todas las tareas pendientes de la fase activa con comando para cada una
+- "quiero ver todo" → mostrar el estado completo de todas las fases
 
 ## Reglas
-- Las tareas que requieren acción manual (crear perfil en G2, Capterra) se marcan pero no se pueden ejecutar con un skill — indicar qué hacer manualmente
-- Siempre mostrar el comando exacto a ejecutar para la siguiente tarea
-- Siempre mostrar el flujo post-creación: `/auditoria-seo` → `/publicar`
-- No inventar tareas que no estén en el plan — ceñirse a `docs/seo/plan-semanal.md`
+
+- Siempre leer `migracion.md` primero — nunca asumir estado desde conversaciones anteriores
+- Actualizar el estado en `migracion.md` cuando el usuario confirme que completó una tarea
+- Las tareas de directorios (G2, Capterra) son manuales — indicar el link y pasos, no hay skill para ejecutarlas
+- Siempre terminar con el comando exacto a ejecutar y el flujo post-creación: `/publicar`
+- No inventar tareas que no estén en `migracion.md` o `plan-semanal.md`
+- Si hay ambigüedad sobre si una tarea está completa, verificar que el archivo HTML existe Y está en `sitemap.xml`

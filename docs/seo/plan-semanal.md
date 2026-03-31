@@ -1,9 +1,25 @@
 # Plan SEO y AEO — getplutto.com
-## Documento de trabajo para Marketing
+## Estrategia de contenido y posicionamiento
 
-**Fecha:** Marzo 2026
-**Para:** Persona de marketing (no requiere conocimiento técnico)
-**Cómo usar este documento:** Sigue las tareas en orden. Cada una indica si la puedes hacer sola, con ayuda de Claude, o si necesita ingeniería. Las tareas con Claude incluyen el prompt exacto que debes copiar.
+> **Cómo usar este documento:**
+> Este archivo es la **estrategia SEO/AEO**: diagnóstico, keywords objetivo, prioridades de contenido, briefs de páginas, y análisis de competidores.
+>
+> El **tracker de ejecución** (qué está hecho, en qué fase estamos, qué sigue) está en [`docs/seo/migracion.md`](migracion.md).
+>
+> Usa `/siguiente-tarea` para que Claude te diga exactamente qué hacer ahora según el estado de la migración.
+
+---
+
+## Mapa de tareas → Fases de migración
+
+| Tareas de este documento | Fase | Cuándo ejecutar |
+|--------------------------|------|-----------------|
+| G2, Capterra, ComparaSoftware (manuales) | **Paralelo** — no bloquea | Puedes hacerlo hoy mismo, no depende de la migración |
+| Artículos `conceptos/` y landings `soluciones/` | **Fase 3** | Después de que Fases 0 y 1 estén completas (diseño listo) |
+| Artículos de blog nuevos | **Fase 4** | Después de migrar el blog existente |
+| Industrias, inglés, prensa | **Fase 5+** | Mes 4 en adelante |
+
+> **Sobre los arreglos técnicos:** La versión anterior de este documento incluía tareas como "cambiar lang='en'", "agregar og:image" o "configurar robots.txt". **Esas tareas ya no aplican** — el sitio se está construyendo desde cero y todas esas optimizaciones están incluidas en los templates desde el día 1.
 
 ---
 
@@ -66,156 +82,12 @@ Los asistentes de IA (ChatGPT, Claude, Perplexity, Google AI Overviews) arman su
 
 ---
 
-## Parte 2: Plan de trabajo
+## Parte 2: Tareas de contenido y posicionamiento
 
-### Semana 1-2 — Arreglos técnicos en el sitio web
+### Tareas paralelas — Perfiles en directorios de software
 
-Estos cambios se hacen en el código del sitio (repo `plutto-labs/landing`). **Puedes hacer todos con Claude** — abre Claude Code en el repo landing y copia el prompt indicado.
-
-#### Tarea 1: Decirle a Google que nuestro sitio es en español
-**Etiqueta:** Con Claude en el repo
-**Por qué:** Google cree que nuestro sitio está en inglés (viene así por defecto). Esto confunde al buscador y nos perjudica en búsquedas en español.
-
-- [ ] Abrir Claude Code en el repo `plutto-labs/landing`
-- [ ] Copiar este prompt:
-
-> Necesito cambiar el atributo de idioma del sitio de inglés a español. Busca en el HTML principal donde dice `lang="en"` y cámbialo a `lang="es"`. Si el sitio usa Webflow y el HTML se genera automáticamente, dime dónde configurarlo. Revisa todos los archivos HTML del repo.
-
----
-
-#### Tarea 2: Agregar imagen de preview para redes sociales (og:image)
-**Etiqueta:** Con Claude en el repo
-**Por qué:** Cuando alguien comparte un link de Plutto en LinkedIn, WhatsApp o Twitter, no se muestra ninguna imagen de preview. Esto hace que el link se vea poco profesional y baje los clicks.
-
-**Requisito previo:** Necesitas una imagen de 1200x630 píxeles con el logo y branding de Plutto (puede ser un diseño simple con el logo centrado sobre fondo de marca). Guárdala en el repo como `og-image.png`.
-
-- [ ] Crear la imagen (o pedir a diseño)
-- [ ] Copiar este prompt en Claude Code:
-
-> Agrega Open Graph meta tags a todas las páginas HTML del sitio. En cada página debe haber:
-> - `<meta property="og:image" content="https://getplutto.com/og-image.png">`
-> - `<meta property="og:title" content="[título de cada página]">`
-> - `<meta property="og:description" content="Plataforma de evaluación y gestión de riesgo de terceros">`
-> - `<meta property="og:type" content="website">`
-> - `<meta property="og:url" content="[URL de cada página]">`
->
-> También agrega Twitter Card tags:
-> - `<meta name="twitter:card" content="summary_large_image">`
-> - `<meta name="twitter:image" content="https://getplutto.com/og-image.png">`
-> - `<meta name="twitter:title" content="[título de cada página]">`
->
-> Ponlos en el `<head>` de cada página HTML.
-
----
-
-#### Tarea 3: Agregar datos estructurados (Schema JSON-LD)
-**Etiqueta:** Con Claude en el repo
-**Por qué:** Los datos estructurados son como una "ficha técnica" invisible que le dice a Google exactamente qué es Plutto, quién lo fundó, dónde opera, etc. Sin esto, Google tiene que adivinar — y adivina mal.
-
-- [ ] Copiar este prompt en Claude Code:
-
-> Agrega el siguiente bloque de datos estructurados (JSON-LD) en el `<head>` de la página principal (index.html o homepage):
->
-> ```html
-> <script type="application/ld+json">
-> {
->   "@context": "https://schema.org",
->   "@type": "Organization",
->   "name": "Plutto",
->   "url": "https://getplutto.com",
->   "logo": "https://getplutto.com/logo.png",
->   "description": "Plataforma de evaluación y gestión de riesgo de terceros. Automatiza due diligence, compliance regulatorio y monitoreo continuo con IA.",
->   "foundingDate": "2020",
->   "founders": [
->     {"@type": "Person", "name": "Felipe Dominguez"},
->     {"@type": "Person", "name": "Nicolás Gajardo"}
->   ],
->   "sameAs": [
->     "https://www.linkedin.com/company/plutto",
->     "https://www.ycombinator.com/companies/plutto",
->     "https://github.com/plutto-labs"
->   ],
->   "areaServed": ["CL", "MX", "CO", "PE"],
->   "knowsAbout": ["KYB", "Due Diligence", "Compliance", "Third-Party Risk Management"]
-> }
-> </script>
-> ```
->
-> Si hay una página de producto (/producto o similar), agrega también un bloque SoftwareApplication:
->
-> ```html
-> <script type="application/ld+json">
-> {
->   "@context": "https://schema.org",
->   "@type": "SoftwareApplication",
->   "name": "Plutto",
->   "applicationCategory": "BusinessApplication",
->   "operatingSystem": "Web",
->   "description": "Plataforma de evaluación y gestión de riesgo de terceros con IA",
->   "offers": {
->     "@type": "Offer",
->     "price": "0",
->     "priceCurrency": "USD",
->     "description": "Contactar para pricing"
->   }
-> }
-> </script>
-> ```
->
-> Verifica que el logo.png referenciado existe en la ruta correcta.
-
----
-
-#### Tarea 4: Configurar robots.txt para bots de IA
-**Etiqueta:** Con Claude en el repo
-**Por qué:** Los asistentes de IA (ChatGPT, Claude, Perplexity) usan "bots" para leer sitios web. Si no les damos permiso explícito, podrían no indexarnos bien.
-
-- [ ] Copiar este prompt en Claude Code:
-
-> Revisa el archivo robots.txt del sitio. Asegúrate de que:
-> 1. Permite el acceso a GPTBot, ClaudeBot y PerplexityBot (no los bloquea)
-> 2. Si no existe robots.txt, créalo con estas reglas:
-> ```
-> User-agent: *
-> Allow: /
->
-> User-agent: GPTBot
-> Allow: /
->
-> User-agent: ClaudeBot
-> Allow: /
->
-> User-agent: PerplexityBot
-> Allow: /
->
-> Sitemap: https://getplutto.com/sitemap.xml
-> ```
-
----
-
-#### Tarea 5: Agregar etiquetas de idioma para Chile y México
-**Etiqueta:** Con Claude en el repo
-**Por qué:** Tenemos una página /mexico. Google necesita saber que esa página es para México y la principal para Chile, para mostrar la correcta en cada país.
-
-- [ ] Copiar este prompt en Claude Code:
-
-> Si existe una página /mexico o similar geo-targeted, agrega etiquetas hreflang en el `<head>` de ambas páginas:
->
-> En la homepage (Chile):
-> ```html
-> <link rel="alternate" hreflang="es-CL" href="https://getplutto.com/" />
-> <link rel="alternate" hreflang="es-MX" href="https://getplutto.com/mexico" />
-> <link rel="alternate" hreflang="x-default" href="https://getplutto.com/" />
-> ```
->
-> En la página México:
-> ```html
-> <link rel="alternate" hreflang="es-CL" href="https://getplutto.com/" />
-> <link rel="alternate" hreflang="es-MX" href="https://getplutto.com/mexico" />
-> <link rel="alternate" hreflang="x-default" href="https://getplutto.com/" />
-> ```
-
----
+> Estas tareas son **manuales** (se hacen en los sitios web de cada directorio, sin tocar código).
+> **No dependen de la migración** — puedes empezarlas hoy mismo mientras avanza la Fase 0.
 
 ### Semana 3-4 — Perfiles en directorios de software
 
@@ -279,9 +151,10 @@ Estas tareas son manuales (se hacen en los sitios web de cada directorio, sin c�
 
 ---
 
-### Mes 2 — Contenido pilar
+### Fase 3 — Contenido pilar (artículos conceptos/)
 
-Estos son artículos y páginas nuevas que se crean en el repo `plutto-labs/landing`. **Todos se pueden hacer con Claude** — más abajo está el brief completo de cada uno.
+> Estas páginas se crean **después de que Fases 0 y 1 estén completas** (diseño y templates listos).
+> Todos se hacen con Claude — más abajo está el brief completo de cada uno.
 
 #### Tarea 10: Artículo "¿Qué es KYB? Guía completa en español"
 **Etiqueta:** Con Claude en el repo
@@ -306,7 +179,7 @@ Estos son artículos y páginas nuevas que se crean en el repo `plutto-labs/land
 
 ---
 
-### Mes 3 — Landing pages por solución + FAQ
+### Fase 3 — Landing pages por solución + FAQ
 
 #### Tarea 14: Landing page — Due Diligence de Proveedores
 **Etiqueta:** Con Claude en el repo
@@ -325,7 +198,7 @@ Estos son artículos y páginas nuevas que se crean en el repo `plutto-labs/land
 
 ---
 
-### Mes 4+ — Expansión
+### Fase 5+ — Expansión (Mes 4 en adelante)
 
 #### Tarea 17: Landing pages por industria
 **Etiqueta:** Con Claude en el repo
