@@ -27,7 +27,7 @@ El diseño aún **no está definido**. Marketing tiene un brand-guide en PDF y r
 |-------|--------|-------|
 | Marketing entrega brand-guide PDF | 🔴 Pendiente | **Pedir a Marketing al iniciar esta fase** |
 | Marketing entrega referentes visuales | 🔴 Pendiente | URLs o imágenes de sitios de referencia |
-| Revisión del Webflow actual | 🔴 Pendiente | Usar MCP Webflow (`mcp__claude_ai_Webflow__*`) |
+| Revisión del Webflow actual | 🔴 Pendiente | Usar WebFetch en `https://getplutto.com` para leer el HTML actual |
 | Definición de nueva paleta de colores | 🔴 Pendiente | Puede diferir de plutto-600 actual |
 | Definición de tipografía y espaciado | 🔴 Pendiente | Inter u otra fuente |
 | Definición de estructura de secciones | 🔴 Pendiente | Orden y tipo de secciones del homepage |
@@ -105,7 +105,7 @@ El diseño aún **no está definido**. Marketing tiene un brand-guide en PDF y r
 1. Pedir a Marketing:
    - Brand-guide PDF (archivo adjunto en la conversación)
    - Lista de URLs o imágenes de sitios referentes
-2. Acceder al Webflow actual vía MCP (`mcp__claude_ai_Webflow__data_pages_tool`, etc.)
+2. Usar WebFetch en `https://getplutto.com` para leer el HTML del sitio Webflow actual y analizar estructura, secciones y diseño
 3. Hacer preguntas específicas a Marketing sobre cada decisión: colores, tipografía, secciones, componentes
 4. No avanzar a Fase 1 hasta tener aprobación explícita de Marketing en cada punto
 
