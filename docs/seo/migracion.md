@@ -2,7 +2,7 @@
 ## De Webflow a HTML estático (Cloudflare Pages)
 
 **Fecha:** Marzo 2026
-**Estado general:** 🔴 No iniciado — partir desde cero
+**Estado general:** 🟡 En progreso — Fase 2 activa
 
 ---
 
@@ -25,34 +25,35 @@ El diseño aún **no está definido**. Marketing tiene un brand-guide en PDF y r
 ### Fase 0 — Definición Visual
 | Tarea | Estado | Notas |
 |-------|--------|-------|
-| Marketing entrega brand-guide PDF | 🔴 Pendiente | **Pedir a Marketing al iniciar esta fase** |
-| Marketing entrega referentes visuales | 🔴 Pendiente | URLs o imágenes de sitios de referencia |
-| Revisión del Webflow actual | 🔴 Pendiente | Usar WebFetch en `https://getplutto.com` para leer el HTML actual |
-| Definición de nueva paleta de colores | 🔴 Pendiente | Puede diferir de plutto-600 actual |
-| Definición de tipografía y espaciado | 🔴 Pendiente | Inter u otra fuente |
-| Definición de estructura de secciones | 🔴 Pendiente | Orden y tipo de secciones del homepage |
-| Definición de componentes nuevos | 🔴 Pendiente | Componentes no existentes en templates actuales |
-| Actualizar docs/marca.md | 🔴 Pendiente | Fuente de verdad del design system |
+| Marketing entrega brand-guide PDF | 🟢 Completado | Brandguide.pdf — Marzo 2026 |
+| Marketing entrega referentes visuales | 🟢 Completado | ziphq.com, fintual.cl, fintoc.com, lio.ai, nuvo.com |
+| Revisión del Webflow actual | 🟢 Completado | Analizado con WebFetch |
+| Definición de nueva paleta de colores | 🟢 Completado | Primary #5563E6 · Navy #2F3A86 · Deep #14144F · Fondo #FAFAFE |
+| Definición de tipografía y espaciado | 🟢 Completado | Solo Inter. py-20 secciones, max-w-6xl contenedor |
+| Definición de estructura de secciones | 🟢 Completado | Arquitectura v3 — 9 secciones homepage |
+| Definición de componentes nuevos | 🟢 Completado | Mega-menú con dropdowns, tabs módulos, métricas |
+| Actualizar docs/marca.md | 🟢 Completado | Design system v2026 completo |
 
 ### Fase 1 — Sistema de Diseño (Templates + CSS)
 | Tarea | Estado | Notas |
 |-------|--------|-------|
-| Actualizar `assets/css/custom.css` | 🔴 Pendiente | Nuevas animaciones y estilos custom |
-| Actualizar `templates/base.html` | 🔴 Pendiente | Nuevo head, nav, footer |
-| Actualizar `templates/landing.html` | 🔴 Pendiente | Nuevas secciones y componentes |
-| Actualizar `templates/articulo.html` | 🔴 Pendiente | Nuevo layout de artículo |
-| Validar index.html con nuevo diseño | 🔴 Pendiente | Homepage como prueba visual del sistema |
+| Actualizar `assets/css/custom.css` | 🟢 Completado | fadeInUp, tabs, mega-menu, marquee, focus-visible |
+| Actualizar `assets/js/main.js` | 🟢 Completado | Mobile menu, tabs data-panel, IntersectionObserver, navbar scroll |
+| Actualizar `templates/base.html` | 🟢 Completado | Paleta v2026, mega-menú 4 dropdowns, footer 5 col, sticky CTA |
+| Actualizar `templates/landing.html` | 🟢 Completado | Todas las secciones con nuevos tokens de diseño |
+| Actualizar `templates/articulo.html` | 🟢 Completado | Body bg-plutto-50, mega-menu, CTA navy, footer 5 col |
+| `index.html` — Homepage arquitectura v3 | 🟢 Completado | 9 secciones: hero, logos, métricas, problema, testimonios, tabs, proceso, audiencias, CTA |
 
 ### Fase 2 — Páginas Base
 | Tarea | Estado | Notas |
 |-------|--------|-------|
-| `index.html` — Homepage completa | 🔴 Pendiente | Contenido real, sin placeholders |
 | `demo.html` — Formulario demo | 🔴 Pendiente | O redirect a Calendly/HubSpot |
 | `mexico.html` — Landing México | 🔴 Pendiente | Con hreflang es-MX |
 | `preguntas-frecuentes.html` | 🔴 Pendiente | FAQPage schema |
 | `robots.txt` actualizado | 🔴 Pendiente | Permitir bots AI (GPTBot, Claude-Web, etc.) |
 | `_redirects` iniciales | 🔴 Pendiente | /demo-form → /demo, /producto → / |
 | `sitemap.xml` con todas las URLs | 🔴 Pendiente | Actualizar al agregar cada página |
+| Guardar hero-producto.webp | 🔴 Pendiente | Pedir a diseño o exportar screenshot del producto |
 
 ### Fase 3 — Landings de Solución + Conceptos
 | Tarea | Estado | Notas |

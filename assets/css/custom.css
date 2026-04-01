@@ -1,7 +1,16 @@
-@keyframes fadeIn {
+/* =============================================================
+   Plutto Landing — Custom CSS
+   Brand Guide 2026 · Primary #5563E6
+   ============================================================= */
+
+/* ----------------------------------------------------------
+   1. Animaciones scroll (data-animate)
+   ---------------------------------------------------------- */
+
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -9,6 +18,106 @@
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeInUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Delay en cascada para grids */
+[data-animate]:nth-child(2) { animation-delay: 0.08s; }
+[data-animate]:nth-child(3) { animation-delay: 0.16s; }
+[data-animate]:nth-child(4) { animation-delay: 0.24s; }
+[data-animate]:nth-child(5) { animation-delay: 0.32s; }
+
+/* ----------------------------------------------------------
+   2. Mega-menú dropdowns (hover puro — CSS fallback)
+   ---------------------------------------------------------- */
+
+/* Asegurar que los dropdowns se muestren sobre el resto */
+nav .group:hover > div,
+nav .group:focus-within > div {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* ----------------------------------------------------------
+   3. Tabs de módulos (section módulos)
+   ---------------------------------------------------------- */
+
+.tab-btn[aria-selected="true"] {
+  background-color: #5563E6;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.tab-btn[aria-selected="false"] {
+  background-color: #ffffff;
+  color: #4b5563;
+}
+
+/* ----------------------------------------------------------
+   4. Scroll suave nativo (refuerzo para Safari)
+   ---------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----------------------------------------------------------
+   5. Safe area bottom (iPhone notch para sticky CTA)
+   ---------------------------------------------------------- */
+
+.safe-area-bottom {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+/* ----------------------------------------------------------
+   6. Logo bar — scroll animado (si se usa marquee)
+   ---------------------------------------------------------- */
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ----------------------------------------------------------
+   7. Details/Summary — quitar flechas nativas del browser
+   ---------------------------------------------------------- */
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ----------------------------------------------------------
+   8. Focus visible — accesibilidad WCAG 2.1 AA
+   ---------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid #5563E6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ----------------------------------------------------------
+   9. Selección de texto con color de marca
+   ---------------------------------------------------------- */
+
+::selection {
+  background-color: #D3CFF9;
+  color: #14144F;
 }

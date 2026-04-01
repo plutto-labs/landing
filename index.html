@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plutto - Verificación de empresas y due diligence automatizado para LATAM</title>
-  <meta name="description" content="Plutto es la plataforma API de KYB y due diligence automatizado para Latinoamérica. Verifica empresas en tiempo real con fuentes oficiales. Prueba gratis.">
+  <title>Plutto — KYB y due diligence automatizado para Latinoamérica</title>
+  <meta name="description" content="Plutto automatiza la verificación de empresas, due diligence y compliance para equipos B2B en LATAM. Conecta con fuentes oficiales en tiempo real. Agenda tu demo.">
   <link rel="canonical" href="https://getplutto.com/">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://getplutto.com/">
-  <meta property="og:title" content="Plutto - Verificación de empresas y due diligence automatizado para LATAM">
-  <meta property="og:description" content="Plataforma API de KYB y due diligence automatizado para Latinoamérica. Verifica empresas en tiempo real con fuentes oficiales.">
+  <meta property="og:title" content="Plutto — KYB y due diligence automatizado para Latinoamérica">
+  <meta property="og:description" content="Automatiza la verificación de empresas, due diligence y compliance para equipos B2B en LATAM. Fuentes oficiales en tiempo real.">
   <meta property="og:image" content="https://getplutto.com/assets/img/og-image.png">
   <meta property="og:site_name" content="Plutto">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Plutto - Verificación de empresas y due diligence automatizado para LATAM">
-  <meta name="twitter:description" content="Plataforma API de KYB y due diligence automatizado para Latinoamérica. Verifica empresas en tiempo real con fuentes oficiales.">
+  <meta name="twitter:title" content="Plutto — KYB y due diligence automatizado para Latinoamérica">
+  <meta name="twitter:description" content="Automatiza la verificación de empresas, due diligence y compliance para equipos B2B en LATAM.">
   <meta name="twitter:image" content="https://getplutto.com/assets/img/og-image.png">
 
   <!-- Favicon -->
@@ -38,17 +38,17 @@
         extend: {
           colors: {
             plutto: {
-              50:  '#eef0ff',
-              100: '#e0e3ff',
-              200: '#c7ccff',
-              300: '#a4a8ff',
-              400: '#7a72ff',
-              500: '#5a4fff',
-              600: '#3d3bf3',
-              700: '#3530d6',
-              800: '#2b28ab',
-              900: '#282787',
-              950: '#18164f',
+              50:  '#FAFAFE',
+              100: '#E2E2F0',
+              200: '#D3CFF9',
+              300: '#BAE8F2',
+              400: '#949AB8',
+              500: '#6B77EC',
+              600: '#5563E6',
+              700: '#2F3A86',
+              800: '#1e265a',
+              900: '#14144F',
+              950: '#0c0c2e',
             },
           },
           fontFamily: {
@@ -62,7 +62,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/custom.css">
 
-  <!-- Schema JSON-LD -->
+  <!-- Schema JSON-LD: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,7 +70,8 @@
     "name": "Plutto",
     "url": "https://getplutto.com",
     "logo": "https://getplutto.com/assets/img/og-image.png",
-    "description": "Plataforma API de KYB y due diligence automatizado para Latinoamérica.",
+    "description": "Plataforma de KYB y due diligence automatizado para Latinoamérica.",
+    "sameAs": ["https://www.linkedin.com/company/getplutto"],
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "hola@getplutto.com",
@@ -78,6 +79,7 @@
     }
   }
   </script>
+  <!-- Schema JSON-LD: SoftwareApplication -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -85,7 +87,7 @@
     "name": "Plutto",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
-    "description": "Verificación de empresas y due diligence automatizado para LATAM. API de KYB con fuentes oficiales en tiempo real.",
+    "description": "Verificación de empresas, due diligence y compliance automatizado para Latinoamérica.",
     "url": "https://getplutto.com",
     "offers": {
       "@type": "Offer",
@@ -96,172 +98,748 @@
   }
   </script>
 </head>
-<body class="font-sans text-gray-900 bg-white antialiased">
+<body class="font-sans text-gray-900 bg-plutto-50 antialiased">
 
-  <!-- NAV -->
-  <nav class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- =============================================
+       NAV — Mega-menu
+       ============================================= -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur-md border-b border-plutto-100 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <a href="/" class="flex items-center gap-2">
-          <span class="text-xl font-bold tracking-tight text-gray-900">Plutto</span>
+
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2 shrink-0">
+          <span class="text-xl font-bold tracking-tight text-plutto-900">Plutto</span>
         </a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="/soluciones/due-diligence-proveedores" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Soluciones</a>
-          <a href="/conceptos/que-es-kyb" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Conceptos</a>
-          <a href="/preguntas-frecuentes" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
-          <a href="/blog" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Blog</a>
+
+        <!-- Desktop nav -->
+        <div class="hidden lg:flex items-center gap-1">
+
+          <!-- Producto dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-plutto-600 rounded-lg hover:bg-plutto-50 transition-colors">
+              Producto
+              <svg class="w-4 h-4 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute left-0 top-full mt-1 w-56 bg-white rounded-xl shadow-lg border border-plutto-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-150 z-50">
+              <a href="/producto/debida-diligencia" class="flex items-start gap-3 px-4 py-3 hover:bg-plutto-50 rounded-lg mx-1">
+                <div class="mt-0.5 w-8 h-8 bg-plutto-100 rounded-lg flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4 text-plutto-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-gray-900">Debida Diligencia</p>
+                  <p class="text-xs text-gray-500 mt-0.5">Evaluación completa de proveedores</p>
+                </div>
+              </a>
+              <a href="/producto/onboarding-empresas" class="flex items-start gap-3 px-4 py-3 hover:bg-plutto-50 rounded-lg mx-1">
+                <div class="mt-0.5 w-8 h-8 bg-plutto-100 rounded-lg flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4 text-plutto-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-gray-900">Onboarding de Empresas</p>
+                  <p class="text-xs text-gray-500 mt-0.5">KYB automatizado y verificación</p>
+                </div>
+              </a>
+              <a href="/producto/screening-continuo" class="flex items-start gap-3 px-4 py-3 hover:bg-plutto-50 rounded-lg mx-1">
+                <div class="mt-0.5 w-8 h-8 bg-plutto-100 rounded-lg flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4 text-plutto-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-gray-900">Screening Continuo</p>
+                  <p class="text-xs text-gray-500 mt-0.5">Monitoreo permanente de riesgos</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Industrias dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-plutto-600 rounded-lg hover:bg-plutto-50 transition-colors">
+              Industrias
+              <svg class="w-4 h-4 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute left-0 top-full mt-1 w-52 bg-white rounded-xl shadow-lg border border-plutto-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-150 z-50">
+              <a href="/industrias/retail-y-distribuidores" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-plutto-50 hover:text-plutto-700 rounded-lg mx-1 transition-colors">Retail y Distribución</a>
+              <a href="/industrias/financiero-y-fintech" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-plutto-50 hover:text-plutto-700 rounded-lg mx-1 transition-colors">Financiero y Fintech</a>
+              <a href="/industrias/salud-y-seguros" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-plutto-50 hover:text-plutto-700 rounded-lg mx-1 transition-colors">Salud y Seguros</a>
+              <a href="/industrias/corporativo-y-holding" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-plutto-50 hover:text-plutto-700 rounded-lg mx-1 transition-colors">Corporativo y Holding</a>
+            </div>
+          </div>
+
+          <!-- Recursos dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-plutto-600 rounded-lg hover:bg-plutto-50 transition-colors">
+              Recursos
+              <svg class="w-4 h-4 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute left-0 top-full mt-1 w-52 bg-white rounded-xl shadow-lg border border-plutto-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-150 z-50">
+              <a href="/blog" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-plutto-50 hover:text-plutto-700 rounded-lg mx-1 transition-colors">Blog</a>
+              <a href="/conceptos/que-es-kyb" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-plutto-50 hover:text-plutto-700 rounded-lg mx-1 transition-colors">Glosario KYB</a>
+              <a href="/preguntas-frecuentes" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-plutto-50 hover:text-plutto-700 rounded-lg mx-1 transition-colors">Preguntas frecuentes</a>
+            </div>
+          </div>
+
+          <!-- Nosotros dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-plutto-600 rounded-lg hover:bg-plutto-50 transition-colors">
+              Nosotros
+              <svg class="w-4 h-4 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute left-0 top-full mt-1 w-48 bg-white rounded-xl shadow-lg border border-plutto-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-150 z-50">
+              <a href="/sobre-plutto" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-plutto-50 hover:text-plutto-700 rounded-lg mx-1 transition-colors">Sobre Plutto</a>
+              <a href="https://www.linkedin.com/company/getplutto" target="_blank" rel="noopener" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-plutto-50 hover:text-plutto-700 rounded-lg mx-1 transition-colors">LinkedIn</a>
+            </div>
+          </div>
+
         </div>
-        <div class="hidden md:flex items-center gap-4">
-          <a href="https://app.getplutto.com/login" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Iniciar sesión</a>
-          <a href="/demo" class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-plutto-600 hover:bg-plutto-700 rounded-lg transition-colors">Agendar demo</a>
+
+        <!-- Desktop CTAs -->
+        <div class="hidden lg:flex items-center gap-3">
+          <!-- País -->
+          <div class="flex items-center gap-1.5 text-sm text-gray-500 border border-plutto-100 rounded-lg px-2.5 py-1.5">
+            <span class="text-base">🇨🇱</span>
+            <span class="text-xs font-medium">Chile</span>
+          </div>
+          <a href="https://app.getplutto.com/login" class="text-sm font-medium text-gray-600 hover:text-plutto-700 transition-colors">Iniciar sesión</a>
+          <a href="/demo" class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-plutto-600 hover:bg-plutto-700 rounded-lg transition-colors shadow-sm shadow-plutto-600/30">
+            Agendar demo
+          </a>
         </div>
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-gray-900" aria-label="Menú">
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-600 hover:text-plutto-600 rounded-lg transition-colors" aria-label="Abrir menú" aria-expanded="false">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
           </svg>
         </button>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white">
-      <div class="px-4 py-4 space-y-3">
-        <a href="/soluciones/due-diligence-proveedores" class="block text-sm font-medium text-gray-600">Soluciones</a>
-        <a href="/conceptos/que-es-kyb" class="block text-sm font-medium text-gray-600">Conceptos</a>
-        <a href="/preguntas-frecuentes" class="block text-sm font-medium text-gray-600">FAQ</a>
-        <a href="/blog" class="block text-sm font-medium text-gray-600">Blog</a>
-        <hr class="border-gray-200">
-        <a href="https://app.getplutto.com/login" class="block text-sm font-medium text-gray-600">Iniciar sesión</a>
-        <a href="/demo" class="block text-center px-4 py-2 text-sm font-semibold text-white bg-plutto-600 rounded-lg">Agendar demo</a>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-plutto-100 bg-white">
+      <div class="px-4 py-5 space-y-1">
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider px-3 pb-1">Producto</p>
+        <a href="/producto/debida-diligencia" class="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-plutto-50 rounded-lg">Debida Diligencia</a>
+        <a href="/producto/onboarding-empresas" class="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-plutto-50 rounded-lg">Onboarding de Empresas</a>
+        <a href="/producto/screening-continuo" class="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-plutto-50 rounded-lg">Screening Continuo</a>
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider px-3 pt-3 pb-1">Industrias</p>
+        <a href="/industrias/retail-y-distribuidores" class="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-plutto-50 rounded-lg">Retail y Distribución</a>
+        <a href="/industrias/financiero-y-fintech" class="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-plutto-50 rounded-lg">Financiero y Fintech</a>
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider px-3 pt-3 pb-1">Recursos</p>
+        <a href="/blog" class="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-plutto-50 rounded-lg">Blog</a>
+        <a href="/preguntas-frecuentes" class="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-plutto-50 rounded-lg">Preguntas frecuentes</a>
+        <div class="pt-3 border-t border-plutto-100 space-y-2">
+          <a href="https://app.getplutto.com/login" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:bg-plutto-50 rounded-lg">Iniciar sesión</a>
+          <a href="/demo" class="block text-center px-4 py-2.5 text-sm font-semibold text-white bg-plutto-600 hover:bg-plutto-700 rounded-lg transition-colors">Agendar demo</a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="pt-32 pb-20 sm:pt-40 sm:pb-28">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 data-animate class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
-        Verificación de empresas y due diligence automatizado para LATAM
-      </h1>
-      <p data-animate class="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-        Plutto centraliza fuentes oficiales de toda Latinoamérica en una sola API. Verifica empresas, identifica beneficiarios finales y automatiza tu compliance en tiempo real.
+
+  <!-- =============================================
+       HERO
+       ============================================= -->
+  <section class="relative pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden">
+
+    <!-- Fondo decorativo: arcos concéntricos SVG -->
+    <div class="absolute inset-0 -z-10 pointer-events-none" aria-hidden="true">
+      <div class="absolute inset-0 bg-gradient-to-br from-plutto-100 via-plutto-50 to-white"></div>
+      <svg class="absolute right-0 top-0 translate-x-1/3 -translate-y-1/4 opacity-30 w-[700px] h-[700px]" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="350" cy="350" r="340" stroke="#5563E6" stroke-width="1.5" stroke-dasharray="4 6"/>
+        <circle cx="350" cy="350" r="280" stroke="#5563E6" stroke-width="1" stroke-dasharray="4 6"/>
+        <circle cx="350" cy="350" r="220" stroke="#2F3A86" stroke-width="1" stroke-dasharray="4 6"/>
+        <circle cx="350" cy="350" r="160" stroke="#2F3A86" stroke-width="1"/>
+        <circle cx="350" cy="350" r="100" stroke="#14144F" stroke-width="1.5"/>
+        <circle cx="350" cy="350" r="40" fill="#D3CFF9" opacity="0.6"/>
+      </svg>
+      <svg class="absolute left-0 bottom-0 -translate-x-1/3 translate-y-1/4 opacity-20 w-[500px] h-[500px]" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="250" cy="250" r="240" stroke="#BAE8F2" stroke-width="2" stroke-dasharray="4 8"/>
+        <circle cx="250" cy="250" r="180" stroke="#5563E6" stroke-width="1" stroke-dasharray="4 8"/>
+        <circle cx="250" cy="250" r="120" stroke="#5563E6" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <!-- Copy -->
+        <div>
+          <div data-animate class="inline-flex items-center gap-2 px-3 py-1.5 bg-plutto-200/60 rounded-full mb-6">
+            <span class="w-2 h-2 bg-plutto-600 rounded-full"></span>
+            <span class="text-xs font-semibold text-plutto-700">KYB · Due Diligence · Compliance para LATAM</span>
+          </div>
+          <h1 data-animate class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-plutto-900 leading-[1.1]">
+            Sabe con quién<br>estás trabajando.
+          </h1>
+          <p data-animate class="mt-6 text-lg text-gray-600 leading-relaxed max-w-lg">
+            Plutto automatiza la verificación de empresas y proveedores para equipos de compliance en Latinoamérica. Conecta con fuentes oficiales y toma decisiones en minutos, no en semanas.
+          </p>
+          <div data-animate class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="/demo" class="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white bg-plutto-600 hover:bg-plutto-700 rounded-xl transition-colors shadow-md shadow-plutto-600/25">
+              Agenda una demo
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="#producto" class="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-plutto-700 bg-white hover:bg-plutto-50 border border-plutto-200 rounded-xl transition-colors">
+              Ver el producto
+            </a>
+          </div>
+          <!-- Prueba social pequeña -->
+          <div data-animate class="mt-8 flex items-center gap-4">
+            <div class="flex -space-x-2">
+              <div class="w-8 h-8 rounded-full bg-plutto-200 border-2 border-white flex items-center justify-center text-xs font-bold text-plutto-700">E</div>
+              <div class="w-8 h-8 rounded-full bg-plutto-300 border-2 border-white flex items-center justify-center text-xs font-bold text-plutto-800">M</div>
+              <div class="w-8 h-8 rounded-full bg-plutto-700 border-2 border-white flex items-center justify-center text-xs font-bold text-white">S</div>
+            </div>
+            <p class="text-sm text-gray-600"><span class="font-semibold text-gray-900">+80 empresas</span> ya verifican con Plutto</p>
+          </div>
+        </div>
+
+        <!-- Screenshot producto -->
+        <div data-animate class="relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-plutto-900/20 border border-plutto-100">
+            <img
+              src="/assets/img/hero-producto.webp"
+              alt="Panel de Debida Diligencia de Plutto — evaluación automatizada de proveedores"
+              width="720"
+              height="480"
+              fetchpriority="high"
+              class="w-full h-auto"
+            >
+          </div>
+          <!-- Badge flotante -->
+          <div class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg border border-plutto-100 px-4 py-3 flex items-center gap-3">
+            <div class="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500">Tiempo de evaluación</p>
+              <p class="text-sm font-bold text-gray-900">76% más rápido</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       LOGOS BAR — Clientes
+       ============================================= -->
+  <section class="py-12 bg-white border-y border-plutto-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-xs font-semibold uppercase tracking-widest text-gray-400 mb-8">Empresas que confían en Plutto</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 opacity-60">
+        <!-- Logos: reemplazar con <img> reales cuando diseño los entregue -->
+        <span class="text-base font-semibold text-gray-500">Entel</span>
+        <span class="text-base font-semibold text-gray-500">Masisa</span>
+        <span class="text-base font-semibold text-gray-500">Clínica Alemana</span>
+        <span class="text-base font-semibold text-gray-500">Sonda</span>
+        <span class="text-base font-semibold text-gray-500">Soprole</span>
+        <span class="text-base font-semibold text-gray-500">Santander</span>
+        <span class="text-base font-semibold text-gray-500">Mall Plaza</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       MÉTRICAS — 4 números clave
+       ============================================= -->
+  <section class="py-16 bg-plutto-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div data-animate class="bg-white rounded-2xl p-6 text-center border border-plutto-100 shadow-sm">
+          <p class="text-3xl sm:text-4xl font-bold text-plutto-600">+80</p>
+          <p class="text-sm text-gray-500 mt-1">empresas usando Plutto</p>
+        </div>
+        <div data-animate class="bg-white rounded-2xl p-6 text-center border border-plutto-100 shadow-sm">
+          <p class="text-3xl sm:text-4xl font-bold text-plutto-600">+175K</p>
+          <p class="text-sm text-gray-500 mt-1">empresas evaluadas</p>
+        </div>
+        <div data-animate class="bg-white rounded-2xl p-6 text-center border border-plutto-100 shadow-sm">
+          <p class="text-3xl sm:text-4xl font-bold text-plutto-600">76%</p>
+          <p class="text-sm text-gray-500 mt-1">reducción en tiempo de evaluación</p>
+        </div>
+        <div data-animate class="bg-white rounded-2xl p-6 text-center border border-plutto-100 shadow-sm">
+          <p class="text-3xl sm:text-4xl font-bold text-plutto-600">22%</p>
+          <p class="text-sm text-gray-500 mt-1">disminución en costo operacional</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       PROBLEMA — Pain points
+       ============================================= -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-14">
+        <h2 data-animate class="text-3xl sm:text-4xl font-bold text-plutto-900 leading-tight">
+          Verificar proveedores en LATAM sigue siendo un trabajo manual y lento.
+        </h2>
+        <p data-animate class="mt-4 text-lg text-gray-600">
+          Los equipos de compliance y abastecimiento pierden semanas revisando fuentes dispersas, documentos en papel y registros desactualizados.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div data-animate class="bg-plutto-50 rounded-2xl p-7 border border-plutto-100">
+          <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold text-gray-900 mb-2">Semanas de trabajo manual</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Cada evaluación requiere consultar registros tributarios, judiciales y mercantiles en múltiples países, uno por uno, sin automatización.</p>
+        </div>
+        <div data-animate class="bg-plutto-50 rounded-2xl p-7 border border-plutto-100">
+          <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold text-gray-900 mb-2">Información dispersa y sin estandarizar</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Cada fuente tiene su formato. Consolidar toda la información en un expediente coherente toma horas y depende de criterio individual.</p>
+        </div>
+        <div data-animate class="bg-plutto-50 rounded-2xl p-7 border border-plutto-100">
+          <div class="w-10 h-10 bg-yellow-100 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold text-gray-900 mb-2">Riesgo sin cobertura continua</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Una empresa aprobada hoy puede tener deudas, sanciones o quiebras mañana. Sin monitoreo continuo, el riesgo no desaparece: se ignora.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       TESTIMONIOS
+       ============================================= -->
+  <section class="py-20 bg-plutto-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 data-animate class="text-3xl sm:text-4xl font-bold text-plutto-900">Lo que dicen los equipos que ya lo usan</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div data-animate class="bg-white rounded-2xl p-7 border border-plutto-100 shadow-sm flex flex-col">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <blockquote class="text-sm text-gray-700 leading-relaxed flex-1">
+            "Pasamos de semanas a horas en la evaluación de nuevos gimnasios franquiciados. El proceso que antes dependía de una persona ahora corre automáticamente."
+          </blockquote>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="w-9 h-9 bg-plutto-200 rounded-full flex items-center justify-center text-xs font-bold text-plutto-700">SF</div>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Equipo de Expansión</p>
+              <p class="text-xs text-gray-500">Smartfit Chile</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-animate class="bg-white rounded-2xl p-7 border border-plutto-100 shadow-sm flex flex-col">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <blockquote class="text-sm text-gray-700 leading-relaxed flex-1">
+            "Plutto nos dio visibilidad total sobre el estado financiero y legal de nuestros proveedores de salud. Hoy tomamos decisiones con datos, no con suposiciones."
+          </blockquote>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="w-9 h-9 bg-plutto-700 rounded-full flex items-center justify-center text-xs font-bold text-white">CA</div>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Área de Abastecimiento</p>
+              <p class="text-xs text-gray-500">Clínica Alemana</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-animate class="bg-white rounded-2xl p-7 border border-plutto-100 shadow-sm flex flex-col">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <blockquote class="text-sm text-gray-700 leading-relaxed flex-1">
+            "Integramos Plutto en nuestro proceso de onboarding de proveedores en menos de una semana. La API es limpia, la documentación excelente, y el soporte en español, un diferenciador enorme."
+          </blockquote>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="w-9 h-9 bg-plutto-300 rounded-full flex items-center justify-center text-xs font-bold text-plutto-900">MS</div>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Gerencia de Compras</p>
+              <p class="text-xs text-gray-500">Masisa</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       PRODUCTO — Tabs de módulos
+       ============================================= -->
+  <section id="producto" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 data-animate class="text-3xl sm:text-4xl font-bold text-plutto-900">Todo lo que tu equipo necesita para conocer a sus contrapartes</h2>
+        <p data-animate class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Una plataforma integrada con cinco módulos que cubren el ciclo completo de evaluación y monitoreo.</p>
+      </div>
+
+      <!-- Tab buttons -->
+      <div class="flex flex-wrap gap-2 justify-center mb-10" role="tablist">
+        <button class="tab-btn px-4 py-2 text-sm font-medium rounded-lg border border-plutto-200 transition-colors" data-tab="debida-diligencia" aria-selected="true" role="tab">Debida Diligencia</button>
+        <button class="tab-btn px-4 py-2 text-sm font-medium rounded-lg border border-plutto-200 bg-white text-gray-600 transition-colors" data-tab="onboarding" aria-selected="false" role="tab">Onboarding KYB</button>
+        <button class="tab-btn px-4 py-2 text-sm font-medium rounded-lg border border-plutto-200 bg-white text-gray-600 transition-colors" data-tab="screening" aria-selected="false" role="tab">Screening Continuo</button>
+        <button class="tab-btn px-4 py-2 text-sm font-medium rounded-lg border border-plutto-200 bg-white text-gray-600 transition-colors" data-tab="expedientes" aria-selected="false" role="tab">Expedientes</button>
+        <button class="tab-btn px-4 py-2 text-sm font-medium rounded-lg border border-plutto-200 bg-white text-gray-600 transition-colors" data-tab="api" aria-selected="false" role="tab">API e Integraciones</button>
+      </div>
+
+      <!-- Tab panels -->
+      <div class="bg-plutto-50 rounded-2xl border border-plutto-100 overflow-hidden">
+
+        <!-- Panel: Debida Diligencia -->
+        <div data-panel="debida-diligencia" role="tabpanel" class="grid lg:grid-cols-2 gap-0">
+          <div class="p-8 lg:p-10 flex flex-col justify-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-plutto-200/60 rounded-full mb-4 w-fit">
+              <span class="text-xs font-semibold text-plutto-700">Módulo 1</span>
+            </div>
+            <h3 class="text-2xl font-bold text-plutto-900 mb-3">Debida Diligencia Automatizada</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">Genera expedientes completos con información tributaria, judicial, mercantil y de listas de riesgo. Todo en un solo lugar, en minutos.</p>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Verificación tributaria (SII, SAT, SUNAT y más)</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Consulta de juicios y causas judiciales</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Screening en listas PEP, OFAC, ONU y locales</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Score de riesgo consolidado y auditable</li>
+            </ul>
+          </div>
+          <div class="bg-plutto-100/50 flex items-center justify-center p-8 min-h-[280px]">
+            <div class="text-center text-gray-400">
+              <svg class="w-16 h-16 mx-auto mb-3 text-plutto-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <p class="text-sm text-gray-400">Screenshot del módulo próximamente</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: Onboarding KYB -->
+        <div data-panel="onboarding" role="tabpanel" class="hidden grid lg:grid-cols-2 gap-0">
+          <div class="p-8 lg:p-10 flex flex-col justify-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-plutto-200/60 rounded-full mb-4 w-fit">
+              <span class="text-xs font-semibold text-plutto-700">Módulo 2</span>
+            </div>
+            <h3 class="text-2xl font-bold text-plutto-900 mb-3">Onboarding de Empresas (KYB)</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">Flujos configurables para recopilar documentación, verificar representantes y aprobar nuevas contrapartes sin trabajo manual.</p>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Formularios digitales de recopilación</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Verificación automática de representantes</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Flujos de aprobación con múltiples niveles</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Trazabilidad completa del proceso</li>
+            </ul>
+          </div>
+          <div class="bg-plutto-100/50 flex items-center justify-center p-8 min-h-[280px]">
+            <div class="text-center">
+              <svg class="w-16 h-16 mx-auto mb-3 text-plutto-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+              <p class="text-sm text-gray-400">Screenshot del módulo próximamente</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: Screening Continuo -->
+        <div data-panel="screening" role="tabpanel" class="hidden grid lg:grid-cols-2 gap-0">
+          <div class="p-8 lg:p-10 flex flex-col justify-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-plutto-200/60 rounded-full mb-4 w-fit">
+              <span class="text-xs font-semibold text-plutto-700">Módulo 3</span>
+            </div>
+            <h3 class="text-2xl font-bold text-plutto-900 mb-3">Screening y Monitoreo Continuo</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">Monitorea tu portafolio de proveedores en tiempo real y recibe alertas automáticas cuando cambie su perfil de riesgo.</p>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Alertas automáticas de cambios de riesgo</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Re-evaluación periódica configurable</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Dashboard de estado del portafolio</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Integración con sistemas ERP y GRC</li>
+            </ul>
+          </div>
+          <div class="bg-plutto-100/50 flex items-center justify-center p-8 min-h-[280px]">
+            <div class="text-center">
+              <svg class="w-16 h-16 mx-auto mb-3 text-plutto-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              <p class="text-sm text-gray-400">Screenshot del módulo próximamente</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: Expedientes -->
+        <div data-panel="expedientes" role="tabpanel" class="hidden grid lg:grid-cols-2 gap-0">
+          <div class="p-8 lg:p-10 flex flex-col justify-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-plutto-200/60 rounded-full mb-4 w-fit">
+              <span class="text-xs font-semibold text-plutto-700">Módulo 4</span>
+            </div>
+            <h3 class="text-2xl font-bold text-plutto-900 mb-3">Gestión de Expedientes</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">Centraliza toda la documentación de cada proveedor. Desde contratos y certificados hasta el historial completo de evaluaciones.</p>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Repositorio centralizado de documentos</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Historial de evaluaciones con trazabilidad</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Alertas de vencimiento de documentos</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Reportes exportables para auditorías</li>
+            </ul>
+          </div>
+          <div class="bg-plutto-100/50 flex items-center justify-center p-8 min-h-[280px]">
+            <div class="text-center">
+              <svg class="w-16 h-16 mx-auto mb-3 text-plutto-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <p class="text-sm text-gray-400">Screenshot del módulo próximamente</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: API e Integraciones -->
+        <div data-panel="api" role="tabpanel" class="hidden grid lg:grid-cols-2 gap-0">
+          <div class="p-8 lg:p-10 flex flex-col justify-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-plutto-200/60 rounded-full mb-4 w-fit">
+              <span class="text-xs font-semibold text-plutto-700">Módulo 5</span>
+            </div>
+            <h3 class="text-2xl font-bold text-plutto-900 mb-3">API e Integraciones</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">Integra Plutto directamente en tus sistemas. API REST bien documentada, webhooks y conectores nativos para los ERPs más usados en LATAM.</p>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>API REST con documentación en español</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Webhooks para eventos en tiempo real</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Conectores SAP, Oracle, Salesforce</li>
+              <li class="flex items-start gap-2.5 text-sm text-gray-700"><svg class="w-4 h-4 text-plutto-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>SLA garantizado y soporte técnico dedicado</li>
+            </ul>
+          </div>
+          <div class="bg-plutto-100/50 flex items-center justify-center p-8 min-h-[280px]">
+            <div class="text-center">
+              <svg class="w-16 h-16 mx-auto mb-3 text-plutto-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+              <p class="text-sm text-gray-400">Documentación API disponible</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       PROCESO — 5 pasos
+       ============================================= -->
+  <section class="py-20 bg-plutto-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 data-animate class="text-3xl sm:text-4xl font-bold text-white">Cómo funciona Plutto</h2>
+        <p data-animate class="mt-4 text-lg text-plutto-300 max-w-2xl mx-auto">De la solicitud a la decisión en cinco pasos, sin trabajo manual.</p>
+      </div>
+      <div class="grid md:grid-cols-5 gap-6">
+        <div data-animate class="text-center">
+          <div class="w-12 h-12 bg-plutto-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">1</div>
+          <h3 class="text-sm font-semibold text-white mb-1">Ingresas el RUT</h3>
+          <p class="text-xs text-plutto-400 leading-relaxed">O cargas tu lista de proveedores vía API o archivo.</p>
+        </div>
+        <div data-animate class="text-center">
+          <div class="w-12 h-12 bg-plutto-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">2</div>
+          <h3 class="text-sm font-semibold text-white mb-1">Plutto consulta fuentes</h3>
+          <p class="text-xs text-plutto-400 leading-relaxed">Conexión automática con registros oficiales en tiempo real.</p>
+        </div>
+        <div data-animate class="text-center">
+          <div class="w-12 h-12 bg-plutto-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">3</div>
+          <h3 class="text-sm font-semibold text-white mb-1">Genera el expediente</h3>
+          <p class="text-xs text-plutto-400 leading-relaxed">Informe consolidado con score de riesgo y hallazgos clave.</p>
+        </div>
+        <div data-animate class="text-center">
+          <div class="w-12 h-12 bg-plutto-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">4</div>
+          <h3 class="text-sm font-semibold text-white mb-1">Equipo decide</h3>
+          <p class="text-xs text-plutto-400 leading-relaxed">Aprueba, rechaza o solicita información adicional con un clic.</p>
+        </div>
+        <div data-animate class="text-center">
+          <div class="w-12 h-12 bg-plutto-700 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">5</div>
+          <h3 class="text-sm font-semibold text-white mb-1">Monitoreo continuo</h3>
+          <p class="text-xs text-plutto-400 leading-relaxed">Alertas automáticas si cambia el perfil de riesgo del proveedor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       AUDIENCIAS — Para quién es Plutto
+       ============================================= -->
+  <section class="py-20 bg-plutto-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 data-animate class="text-3xl sm:text-4xl font-bold text-plutto-900">Diseñado para los equipos que gestionan riesgo</h2>
+        <p data-animate class="mt-4 text-lg text-gray-600">Plutto se adapta al flujo de trabajo de cada área.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div data-animate class="bg-white rounded-2xl p-8 border border-plutto-100 shadow-sm hover:border-plutto-300 transition-colors group">
+          <div class="w-12 h-12 bg-plutto-100 group-hover:bg-plutto-200 rounded-2xl flex items-center justify-center mb-5 transition-colors">
+            <svg class="w-6 h-6 text-plutto-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Compliance y Legal</h3>
+          <p class="text-sm text-gray-600 mb-5 leading-relaxed">Cumple con normativas de prevención de lavado de activos, Ley 20.393 y Ley Karin con evidencia documentada y auditable.</p>
+          <a href="/industrias/financiero-y-fintech" class="text-sm font-semibold text-plutto-600 hover:text-plutto-700 flex items-center gap-1 group-hover:gap-2 transition-all">
+            Ver más <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+        <div data-animate class="bg-white rounded-2xl p-8 border border-plutto-100 shadow-sm hover:border-plutto-300 transition-colors group">
+          <div class="w-12 h-12 bg-plutto-100 group-hover:bg-plutto-200 rounded-2xl flex items-center justify-center mb-5 transition-colors">
+            <svg class="w-6 h-6 text-plutto-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Abastecimiento y Compras</h3>
+          <p class="text-sm text-gray-600 mb-5 leading-relaxed">Evalúa nuevos proveedores antes de firmar contratos y mantén actualizado el registro de homologación sin trabajo manual.</p>
+          <a href="/industrias/retail-y-distribuidores" class="text-sm font-semibold text-plutto-600 hover:text-plutto-700 flex items-center gap-1 group-hover:gap-2 transition-all">
+            Ver más <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+        <div data-animate class="bg-white rounded-2xl p-8 border border-plutto-100 shadow-sm hover:border-plutto-300 transition-colors group">
+          <div class="w-12 h-12 bg-plutto-100 group-hover:bg-plutto-200 rounded-2xl flex items-center justify-center mb-5 transition-colors">
+            <svg class="w-6 h-6 text-plutto-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Finanzas y Riesgo</h3>
+          <p class="text-sm text-gray-600 mb-5 leading-relaxed">Evalúa la salud financiera de clientes y contrapartes. Detecta señales de alerta antes de extender crédito o cerrar contratos.</p>
+          <a href="/industrias/corporativo-y-holding" class="text-sm font-semibold text-plutto-600 hover:text-plutto-700 flex items-center gap-1 group-hover:gap-2 transition-all">
+            Ver más <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       CTA FINAL — Dark
+       ============================================= -->
+  <section id="cta" class="relative py-24 bg-plutto-900 overflow-hidden">
+    <!-- Orbs decorativos -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-0 left-1/4 w-72 h-72 bg-plutto-600/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-72 h-72 bg-plutto-700/20 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 data-animate class="text-3xl sm:text-5xl font-bold text-white leading-tight">
+        Empieza a saber con<br class="hidden sm:block"> quién trabajas.
+      </h2>
+      <p data-animate class="mt-6 text-lg text-plutto-300 max-w-xl mx-auto">
+        Agenda una demo de 30 minutos y te mostramos cómo Plutto se adapta al proceso de evaluación de tu empresa.
       </p>
       <div data-animate class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#cta" class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-plutto-600 hover:bg-plutto-700 rounded-lg transition-colors shadow-lg shadow-plutto-600/25">
-          Agenda una demo
+        <a href="/demo" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-semibold text-plutto-900 bg-white hover:bg-plutto-50 rounded-xl transition-colors shadow-lg">
+          Agendar demo gratuita
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
-        <a href="#features" class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
-          Conoce el producto
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section id="features" class="py-20 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 data-animate class="text-3xl sm:text-4xl font-bold text-gray-900">Todo lo que necesitas para verificar empresas</h2>
-        <p data-animate class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Una plataforma completa de KYB y due diligence, diseñada para equipos de compliance en Latinoamérica.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div data-animate class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
-          <div class="w-12 h-12 bg-plutto-100 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-plutto-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Verificación en tiempo real</h3>
-          <p class="text-gray-600">Consulta fuentes oficiales de múltiples países de LATAM al instante. Sin esperar días por resultados manuales.</p>
-        </div>
-
-        <div data-animate class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
-          <div class="w-12 h-12 bg-plutto-100 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-plutto-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Compliance automatizado</h3>
-          <p class="text-gray-600">Due diligence, listas de sanciones, PEPs y beneficiarios finales. Todo en flujos configurables por API.</p>
-        </div>
-
-        <div data-animate class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
-          <div class="w-12 h-12 bg-plutto-100 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-plutto-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">API-first, hecho para LATAM</h3>
-          <p class="text-gray-600">Documentación en español, cobertura nativa de fuentes latinoamericanas y pricing adaptado a la región.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL PROOF -->
-  <section id="social-proof" class="py-20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p data-animate class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-10">Empresas que confían en Plutto</p>
-      <div data-animate class="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
-        <!-- Reemplazar con logos reales de clientes en assets/img/logos/ -->
-        <div class="h-8 w-24 bg-gray-200 rounded"></div>
-        <div class="h-8 w-28 bg-gray-200 rounded"></div>
-        <div class="h-8 w-20 bg-gray-200 rounded"></div>
-        <div class="h-8 w-32 bg-gray-200 rounded"></div>
-        <div class="h-8 w-24 bg-gray-200 rounded"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section id="cta" class="py-20 bg-plutto-600">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 data-animate class="text-3xl sm:text-4xl font-bold text-white">Automatiza tu compliance hoy</h2>
-      <p data-animate class="mt-4 text-lg text-plutto-100 max-w-2xl mx-auto">Conecta tu plataforma con la API de Plutto y empieza a verificar empresas en minutos, no en semanas.</p>
-      <div data-animate class="mt-10">
-        <a href="mailto:hola@getplutto.com" class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-plutto-600 bg-white hover:bg-plutto-50 rounded-lg transition-colors shadow-lg">
-          Agenda una demo gratuita
+        <a href="mailto:hola@getplutto.com" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-semibold text-white border border-plutto-600 hover:bg-plutto-800 rounded-xl transition-colors">
+          Escribirnos directamente
         </a>
       </div>
+      <p data-animate class="mt-6 text-sm text-plutto-400">Sin compromiso · Respuesta en menos de 24 horas</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-400">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+  <!-- =============================================
+       FOOTER — 5 columnas
+       ============================================= -->
+  <footer class="bg-plutto-950 text-plutto-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+
+        <!-- Columna 1: Marca -->
         <div class="col-span-2 md:col-span-1">
-          <span class="text-lg font-bold text-white">Plutto</span>
-          <p class="mt-4 text-sm text-gray-500">Verificación de empresas automatizada para equipos de compliance.</p>
+          <span class="text-xl font-bold text-white tracking-tight">Plutto</span>
+          <p class="mt-3 text-sm leading-relaxed text-plutto-400">Verificación de empresas y due diligence automatizado para Latinoamérica.</p>
+          <div class="mt-4 flex gap-3">
+            <a href="https://www.linkedin.com/company/getplutto" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-8 h-8 bg-plutto-800 hover:bg-plutto-700 rounded-lg flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4 text-plutto-300" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
         </div>
+
+        <!-- Columna 2: Producto -->
         <div>
-          <p class="text-sm font-semibold text-white mb-4">Soluciones</p>
-          <ul class="space-y-2">
-            <li><a href="/soluciones/due-diligence-proveedores" class="text-sm hover:text-white transition-colors">Due Diligence</a></li>
-            <li><a href="/soluciones/compliance-proveedores" class="text-sm hover:text-white transition-colors">Compliance</a></li>
+          <p class="text-sm font-semibold text-white mb-4">Producto</p>
+          <ul class="space-y-2.5">
+            <li><a href="/producto/debida-diligencia" class="text-sm hover:text-white transition-colors">Debida Diligencia</a></li>
+            <li><a href="/producto/onboarding-empresas" class="text-sm hover:text-white transition-colors">Onboarding KYB</a></li>
+            <li><a href="/producto/screening-continuo" class="text-sm hover:text-white transition-colors">Screening Continuo</a></li>
+            <li><a href="/demo" class="text-sm hover:text-white transition-colors">Agendar demo</a></li>
           </ul>
         </div>
+
+        <!-- Columna 3: Industrias -->
+        <div>
+          <p class="text-sm font-semibold text-white mb-4">Industrias</p>
+          <ul class="space-y-2.5">
+            <li><a href="/industrias/retail-y-distribuidores" class="text-sm hover:text-white transition-colors">Retail y Distribución</a></li>
+            <li><a href="/industrias/financiero-y-fintech" class="text-sm hover:text-white transition-colors">Financiero y Fintech</a></li>
+            <li><a href="/industrias/salud-y-seguros" class="text-sm hover:text-white transition-colors">Salud y Seguros</a></li>
+            <li><a href="/industrias/corporativo-y-holding" class="text-sm hover:text-white transition-colors">Corporativo</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Recursos -->
         <div>
           <p class="text-sm font-semibold text-white mb-4">Recursos</p>
-          <ul class="space-y-2">
-            <li><a href="/conceptos/que-es-kyb" class="text-sm hover:text-white transition-colors">Conceptos</a></li>
+          <ul class="space-y-2.5">
             <li><a href="/blog" class="text-sm hover:text-white transition-colors">Blog</a></li>
-            <li><a href="/preguntas-frecuentes" class="text-sm hover:text-white transition-colors">FAQ</a></li>
+            <li><a href="/conceptos/que-es-kyb" class="text-sm hover:text-white transition-colors">Glosario KYB</a></li>
+            <li><a href="/preguntas-frecuentes" class="text-sm hover:text-white transition-colors">Preguntas frecuentes</a></li>
+            <li><a href="/conceptos/que-es-due-diligence" class="text-sm hover:text-white transition-colors">¿Qué es Due Diligence?</a></li>
           </ul>
         </div>
+
+        <!-- Columna 5: Empresa -->
         <div>
           <p class="text-sm font-semibold text-white mb-4">Empresa</p>
-          <ul class="space-y-2">
-            <li><a href="/demo" class="text-sm hover:text-white transition-colors">Agendar demo</a></li>
+          <ul class="space-y-2.5">
+            <li><a href="/sobre-plutto" class="text-sm hover:text-white transition-colors">Sobre Plutto</a></li>
             <li><a href="https://app.getplutto.com/login" class="text-sm hover:text-white transition-colors">Iniciar sesión</a></li>
+            <li><a href="mailto:hola@getplutto.com" class="text-sm hover:text-white transition-colors">hola@getplutto.com</a></li>
           </ul>
+          <div class="mt-5 flex items-center gap-2 text-xs text-plutto-500">
+            <span>🇨🇱</span><span>Chile</span>
+            <span class="mx-1">·</span>
+            <span>🇲🇽</span><span>México</span>
+          </div>
         </div>
+
       </div>
-      <div class="mt-12 pt-8 border-t border-gray-800 text-center">
-        <p class="text-sm text-gray-500">&copy; 2026 Plutto. Todos los derechos reservados.</p>
+
+      <!-- Bottom bar -->
+      <div class="pt-8 border-t border-plutto-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-plutto-500">&copy; 2026 Plutto. Todos los derechos reservados.</p>
+        <div class="flex gap-5">
+          <a href="/privacidad" class="text-xs text-plutto-500 hover:text-plutto-300 transition-colors">Política de Privacidad</a>
+          <a href="/terminos" class="text-xs text-plutto-500 hover:text-plutto-300 transition-colors">Términos de Uso</a>
+        </div>
       </div>
     </div>
   </footer>
+
+
+  <!-- =============================================
+       STICKY MOBILE CTA
+       ============================================= -->
+  <div class="lg:hidden fixed bottom-0 inset-x-0 z-40 safe-area-bottom bg-white/95 backdrop-blur-md border-t border-plutto-100 px-4 py-3">
+    <a href="/demo" class="flex items-center justify-center gap-2 w-full py-3 text-sm font-semibold text-white bg-plutto-600 hover:bg-plutto-700 rounded-xl transition-colors">
+      Agendar demo gratuita
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>
