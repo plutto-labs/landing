@@ -121,3 +121,134 @@ details > summary::-webkit-details-marker {
   background-color: #D3CFF9;
   color: #14144F;
 }
+
+/* ----------------------------------------------------------
+   10. Animaciones avanzadas — variedad scroll
+   ---------------------------------------------------------- */
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ----------------------------------------------------------
+   11. Micro-interacciones — hover cards y links
+   ---------------------------------------------------------- */
+
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(85, 99, 230, 0.15);
+}
+
+.link-grow {
+  position: relative;
+}
+
+.link-grow::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #5563E6;
+  transition: width 0.3s ease;
+}
+
+.link-grow:hover::after {
+  width: 100%;
+}
+
+/* ----------------------------------------------------------
+   12. Fondos texturizados — gradiente mesh Plutto
+   ---------------------------------------------------------- */
+
+.bg-mesh-light {
+  background:
+    radial-gradient(ellipse at 30% 0%, rgba(211,207,249,0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(186,232,242,0.25) 0%, transparent 45%),
+    #FAFAFE;
+}
+
+.bg-mesh-dark {
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(85,99,230,0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 70%, rgba(47,58,134,0.2) 0%, transparent 45%),
+    #14144F;
+}
+
+/* Grain overlay sutil */
+.grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ----------------------------------------------------------
+   13. Reduced motion — accesibilidad
+   ---------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-scale-in,
+  .animate-marquee {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .card-hover {
+    transition: none !important;
+  }
+}

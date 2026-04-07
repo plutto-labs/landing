@@ -67,6 +67,16 @@ git push origin master
 | `/optimizar-imagenes` | Auditar y corregir atributos de imágenes |
 | `/migrar-blog` | Migrar artículos del subdomain blog a /blog/ |
 | `/plutto-blog` | Escribir artículos del blog con pipeline anti-IA y voz auténtica |
+| `/plutto-design` | Diseño anti-IA adaptado a Plutto (paleta, Inter, Tailwind CDN) |
+| `/frontend-design` | Diseño frontend distintivo (Impeccable — skill base) |
+| `/audit` | Auditoría técnica de calidad visual (anti-patrones, accesibilidad) |
+| `/critique` | Evaluación UX con scoring cuantitativo |
+| `/animate` | Agregar animaciones y micro-interacciones |
+| `/polish` | Pase final de calidad: alineación, spacing, detalles |
+| `/bolder` | Amplificar diseños tímidos para más impacto visual |
+| `/arrange` | Mejorar layout, spacing y ritmo visual |
+| `/typeset` | Mejorar tipografía, jerarquía y legibilidad |
+| `/colorize` | Agregar color estratégico a interfaces monótonas |
 
 ## Reglas para el asistente
 
@@ -85,6 +95,14 @@ git push origin master
 - No usar dark mode (no agregar clases `dark:`)
 - Font: Inter. No agregar otras fuentes
 - Incluir Tailwind config inline en el `<head>` de cada página (ya incluido en los templates)
+
+### Diseño anti-IA (Impeccable + plutto-design)
+- Al crear o modificar páginas, consultar siempre el skill `/plutto-design` para guías anti-IA adaptadas a Plutto
+- Cada sección debe tener un layout DIFERENTE a la anterior (no repetir grids simétricos)
+- Variar spacing vertical entre secciones (`py-16`, `py-24`, `py-32`) — no usar `py-20` en todas
+- Usar clases de `custom.css`: `.card-hover`, `.bg-mesh-light`, `.bg-mesh-dark`, `.grain`, `.animate-slide-left/right`, `.animate-scale-in`
+- Ver anti-patrones completos en `docs/marca.md` sección 16
+- Skills de Impeccable disponibles: `/audit`, `/critique`, `/bolder`, `/polish`, `/animate`, `/arrange`, `/typeset`, `/colorize`
 
 ### SEO y AEO
 - HTML semántico: `<article>`, `<section>`, `<table>` nativo, `<ul>`/`<ol>` nativo

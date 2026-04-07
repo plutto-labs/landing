@@ -870,3 +870,49 @@ Sticky, con dropdowns en desktop y acordeón en mobile. Basada en arquitectura v
 13. **Breadcrumbs** (HTML + schema) en todas las páginas internas
 14. **No usar `dark:`** — dark mode deshabilitado
 15. **Nunca eliminar atributos `data-animate`**
+
+---
+
+## 16. Anti-patrones de Diseño (evitar "AI slop")
+
+Estos patrones hacen que una página se vea genérica y generada por IA. Evitarlos activamente:
+
+### Layout
+| ❌ No hacer | ✅ Hacer en su lugar |
+|---|---|
+| Repetir el mismo grid en secciones consecutivas | Variar layout entre secciones: asimétrico, full-width, alternado |
+| Hero → Feature cards → Testimonials → CTA (siempre) | Romper la secuencia con secciones de stats, comparativas, o contenido full-bleed |
+| Centrar todo el contenido | Usar alineación izquierda con composiciones asimétricas |
+| Cards idénticas (ícono + título + texto) × 6 | Mezclar tamaños de cards, usar layouts desiguales `grid-cols-[2fr_1fr]` |
+| `py-20` en todas las secciones | Variar: `py-12`, `py-24`, `py-32` según importancia |
+
+### Visual
+| ❌ No hacer | ✅ Hacer en su lugar |
+|---|---|
+| Gradientes lineares genéricos | Gradientes mesh con `radial-gradient` usando paleta plutto |
+| `bg-white` (#fff) | `bg-plutto-50` (#FAFAFE) — off-white de marca |
+| Solo usar `plutto-600` como color | Mezclar `plutto-200`, `plutto-300`, `plutto-900` según contexto |
+| Sombras drop-shadow iguales en todas las cards | Variar sombras: `shadow-sm` para sutileza, `shadow-plutto-600/15` para impacto |
+| Glassmorphism (blur, glass cards) sin propósito | Fondos texturizados con `.bg-mesh-light` o `.grain` |
+
+### Tipografía (con Inter)
+| ❌ No hacer | ✅ Hacer en su lugar |
+|---|---|
+| Mismo tamaño y weight en todo | Contraste dramático: H1 `text-7xl font-bold leading-none` + body `text-base` |
+| Tracking default en todo | `tracking-tight` en headings, `tracking-widest` en kickers |
+| Solo `font-semibold` y `font-bold` | Usar `font-light` para textos decorativos grandes |
+
+### CSS disponible en `custom.css`
+
+Clases utilitarias para diseño anti-IA:
+
+| Clase | Efecto |
+|---|---|
+| `.card-hover` | Hover con translateY + sombra plutto |
+| `.link-grow` | Underline que crece desde la izquierda |
+| `.animate-slide-left` | Entrada desde la izquierda (scroll) |
+| `.animate-slide-right` | Entrada desde la derecha (scroll) |
+| `.animate-scale-in` | Entrada con escala (scroll) |
+| `.bg-mesh-light` | Fondo gradiente mesh sobre plutto-50 |
+| `.bg-mesh-dark` | Fondo gradiente mesh sobre plutto-900 |
+| `.grain` | Overlay de ruido sutil (agregar `position: relative`) |

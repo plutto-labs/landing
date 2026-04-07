@@ -250,8 +250,12 @@
 
   <!-- ============================================================
        PROBLEMA
+       ⚠️ ANTI-IA: Esta sección usa grid-cols-3 simétrico.
+       La siguiente sección DEBE usar un layout DIFERENTE:
+       asimétrico (grid-cols-[2fr_1fr]), alternado izq-der, o full-width.
+       Variar el py- entre secciones (py-16, py-24, py-32).
        ============================================================ -->
-  <section class="py-20 bg-plutto-50">
+  <section class="py-24 bg-plutto-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 max-w-3xl mx-auto">
         <p data-animate class="text-sm font-semibold uppercase tracking-widest text-plutto-600 mb-3">El problema</p>
@@ -286,8 +290,12 @@
 
   <!-- ============================================================
        FEATURES / SOLUCIÓN
+       ⚠️ ANTI-IA: NO repetir el patrón de 4 cards iguales.
+       Opciones: 1 card grande + 2 pequeñas, grid asimétrico,
+       layout alternado (imagen izq, texto der, luego invertido),
+       o sección full-bleed con overlay. Usar card-hover de custom.css.
        ============================================================ -->
-  <section class="py-20 bg-white">
+  <section class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 max-w-3xl mx-auto">
         <p data-animate class="text-sm font-semibold uppercase tracking-widest text-plutto-600 mb-3">La solución</p>
@@ -329,8 +337,11 @@
 
   <!-- ============================================================
        STATS / ROI
+       ⚠️ ANTI-IA: Considerar usar bg-mesh-light o bg-plutto-900
+       con texto claro para romper la monotonía visual. Stagger
+       los stats con mt-4/mt-8 en vez de grid plano centrado.
        ============================================================ -->
-  <section class="py-20 bg-plutto-50">
+  <section class="py-32 bg-plutto-50 bg-mesh-light relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 max-w-3xl mx-auto">
         <p data-animate class="text-sm font-semibold uppercase tracking-widest text-plutto-600 mb-3">Resultados</p>
