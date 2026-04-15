@@ -74,13 +74,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ----------------------------------------------------------
-     3. IntersectionObserver — animaciones scroll (data-animate)
+     3. IntersectionObserver — animaciones scroll premium
+     Soporta: data-animate (fadeInUp), data-animate="blur" (blurIn),
+              data-animate="scale" (scaleIn)
      ---------------------------------------------------------- */
+  const animationMap = {
+    '': 'animate-fade-in',
+    'blur': 'animate-blur-in',
+    'scale': 'animate-scale-in',
+  };
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in');
+          const type = entry.target.getAttribute('data-animate') || '';
+          const cls = animationMap[type] || 'animate-fade-in';
+          entry.target.classList.add(cls);
           observer.unobserve(entry.target);
         }
       });
@@ -88,13 +98,74 @@ document.addEventListener('DOMContentLoaded', () => {
     { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
   );
 
-  document.querySelectorAll('[data-animate]').forEach(el => {
+  document.querySelectorAll('[data-animate]').forEach((el, i) => {
     el.classList.add('opacity-0');
+    // Stagger automático para siblings en grids
+    const parent = el.parentElement;
+    if (parent) {
+      const siblings = Array.from(parent.querySelectorAll(':scope > [data-animate]'));
+      const idx = siblings.indexOf(el);
+      if (idx > 0 && !el.hasAttribute('data-delay')) {
+        el.style.animationDelay = (idx * 0.1) + 's';
+      }
+    }
     observer.observe(el);
   });
 
   /* ----------------------------------------------------------
-     4. Navbar — cambio de fondo al hacer scroll
+     3b. Counter animado — métricas (inspirado en PureCounter)
+     ---------------------------------------------------------- */
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseFloat(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const prefix = el.dataset.prefix || '';
+        const decimals = el.dataset.decimals ? parseInt(el.dataset.decimals) : 0;
+        const duration = 1800;
+        const start = performance.now();
+
+        function easeOutExpo(t) {
+          return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+        }
+
+        function update(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeOutExpo(progress);
+          const current = eased * target;
+
+          if (decimals > 0) {
+            el.textContent = prefix + current.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + suffix;
+          } else {
+            const formatted = Math.round(current).toLocaleString('es-CL');
+            el.textContent = prefix + formatted + suffix;
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          }
+        }
+
+        requestAnimationFrame(update);
+        counterObserver.unobserve(el);
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  document.querySelectorAll('[data-counter]').forEach(el => {
+    counterObserver.observe(el);
+  });
+
+  /* ----------------------------------------------------------
+     4. Carrusel de testimonios — se inicializa en script aparte
+     ---------------------------------------------------------- */
+
+  /* ----------------------------------------------------------
+     5. Navbar — cambio de fondo al hacer scroll
      ---------------------------------------------------------- */
   const navbar = document.querySelector('nav');
   if (navbar) {

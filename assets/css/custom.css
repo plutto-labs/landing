@@ -123,35 +123,26 @@ details > summary::-webkit-details-marker {
 }
 
 /* ----------------------------------------------------------
-   10. Animaciones avanzadas — variedad scroll
+   10. Animaciones premium — blur-in, scale-in (ziphq, nuvo)
    ---------------------------------------------------------- */
 
-@keyframes slideInLeft {
+@keyframes blurIn {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    filter: blur(8px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+    filter: blur(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.92);
+    transform: scale(0.94);
   }
   to {
     opacity: 1;
@@ -159,96 +150,232 @@ details > summary::-webkit-details-marker {
   }
 }
 
-.animate-slide-left {
-  animation: slideInLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.animate-slide-right {
-  animation: slideInRight 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+.animate-blur-in {
+  animation: blurIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-scale-in {
-  animation: scaleIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: scaleIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* ----------------------------------------------------------
-   11. Micro-interacciones — hover cards y links
+   11. Tipografía premium — letter-spacing negativo (nuvo, zip)
    ---------------------------------------------------------- */
 
-.card-hover {
+h1, h2 {
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Counter numbers */
+.counter-number {
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+/* ----------------------------------------------------------
+   12. Hover "dim siblings" — Audiencias (nuvo.com)
+   ---------------------------------------------------------- */
+
+.dim-siblings > * {
+  transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dim-siblings:hover > *:not(:hover) {
+  opacity: 0.45;
+}
+
+/* ----------------------------------------------------------
+   13. Glow decorativo radial (ziphq.com)
+   ---------------------------------------------------------- */
+
+.glow-plutto {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(85, 99, 230, 0.25) 0%, rgba(85, 99, 230, 0) 100%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.glow-cyan {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(186, 232, 242, 0.3) 0%, rgba(186, 232, 242, 0) 100%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------
+   14. Métricas — strip horizontal con dividers (nuvo, zip)
+   ---------------------------------------------------------- */
+
+.metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Dividers verticales entre métricas */
+.metric-item {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.metric-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 25%;
+  height: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(85, 99, 230, 0.2), transparent);
+}
+
+@media (max-width: 767px) {
+  .metric-item:nth-child(2)::after {
+    display: none;
+  }
+}
+
+/* ----------------------------------------------------------
+   15. Stagger delays mejorados (cascada más visual)
+   ---------------------------------------------------------- */
+
+[data-delay="1"] { animation-delay: 0.1s; }
+[data-delay="2"] { animation-delay: 0.2s; }
+[data-delay="3"] { animation-delay: 0.3s; }
+[data-delay="4"] { animation-delay: 0.4s; }
+[data-delay="5"] { animation-delay: 0.5s; }
+
+/* ----------------------------------------------------------
+   16. Card lift — hover con elevación sutil
+   ---------------------------------------------------------- */
+
+.card-lift {
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.card-hover:hover {
+.card-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -12px rgba(85, 99, 230, 0.15);
-}
-
-.link-grow {
-  position: relative;
-}
-
-.link-grow::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #5563E6;
-  transition: width 0.3s ease;
-}
-
-.link-grow:hover::after {
-  width: 100%;
+  box-shadow: 0 12px 32px -8px rgba(85, 99, 230, 0.15);
 }
 
 /* ----------------------------------------------------------
-   12. Fondos texturizados — gradiente mesh Plutto
+   17. Timeline — línea conectora animada
    ---------------------------------------------------------- */
 
-.bg-mesh-light {
-  background:
-    radial-gradient(ellipse at 30% 0%, rgba(211,207,249,0.35) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(186,232,242,0.25) 0%, transparent 45%),
-    #FAFAFE;
+@keyframes timelineDraw {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
 }
 
-.bg-mesh-dark {
-  background:
-    radial-gradient(ellipse at 20% 30%, rgba(85,99,230,0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 75% 70%, rgba(47,58,134,0.2) 0%, transparent 45%),
-    #14144F;
-}
-
-/* Grain overlay sutil */
-.grain::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
+.timeline-line {
+  transform-origin: left center;
+  animation: timelineDraw 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.3s;
+  transform: scaleX(0);
 }
 
 /* ----------------------------------------------------------
-   13. Reduced motion — accesibilidad
+   18. Hero animated glows (ruixen-ui style)
+   ---------------------------------------------------------- */
+
+@keyframes heroGlowLeft {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateX(-100px);
+  }
+  to {
+    opacity: 0.3;
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes heroGlowRight {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateX(100px);
+  }
+  to {
+    opacity: 0.2;
+    transform: scale(1) translateX(0);
+  }
+}
+
+.hero-glow-left {
+  animation: heroGlowLeft 1.5s ease-out forwards;
+}
+
+.hero-glow-right {
+  animation: heroGlowRight 1.5s 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+/* ----------------------------------------------------------
+   19. Testimonios — columnas con scroll vertical infinito
+   ---------------------------------------------------------- */
+
+@keyframes scrollUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+
+.testimonial-column {
+  animation: scrollUp 15s linear infinite;
+}
+
+.testimonial-column-slow {
+  animation: scrollUp 19s linear infinite;
+}
+
+.testimonial-column-mid {
+  animation: scrollUp 17s linear infinite;
+}
+
+.testimonial-column:hover,
+.testimonial-column-slow:hover,
+.testimonial-column-mid:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-mask {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+}
+
+/* ----------------------------------------------------------
+   20. Reduced motion preferences
    ---------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-in,
-  .animate-slide-left,
-  .animate-slide-right,
-  .animate-scale-in,
-  .animate-marquee {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
+  .card-lift:hover {
+    transform: none;
   }
-
-  .card-hover {
-    transition: none !important;
+  .timeline-line {
+    animation: none;
+    transform: scaleX(1);
+  }
+  .hero-glow-left,
+  .hero-glow-right {
+    animation: none;
+    opacity: 0.2;
+    transform: none;
+  }
+  .testimonial-column,
+  .testimonial-column-slow,
+  .testimonial-column-mid {
+    animation: none;
   }
 }
