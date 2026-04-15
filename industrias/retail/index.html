@@ -365,43 +365,38 @@
       </div>
 
       <!-- Bloque 1 — texto izq + ilustraci&oacute;n der -->
-      <div data-animate class="grid lg:grid-cols-2 gap-8 items-center mb-12">
-        <div class="bg-plutto-50 rounded-2xl p-8 sm:p-10 border border-plutto-100">
+      <div data-animate class="grid lg:grid-cols-5 gap-8 items-center mb-12">
+        <div class="lg:col-span-3 bg-plutto-50 rounded-2xl p-8 sm:p-10 border border-plutto-100">
           <div class="w-11 h-11 bg-plutto-200 rounded-xl flex items-center justify-center mb-5">
             <svg class="w-5 h-5 text-plutto-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
           </div>
           <h3 class="text-xl font-semibold text-gray-900 mb-3">Verificaci&oacute;n masiva de proveedores</h3>
           <p class="text-gray-600 leading-relaxed">Eval&uacute;a cientos de proveedores en paralelo consultando fuentes oficiales de forma autom&aacute;tica. Sin depender de que cada proveedor llene formularios ni enviar correos de seguimiento.</p>
         </div>
-        <div class="bg-gradient-to-br from-plutto-100 via-plutto-50 to-white rounded-2xl aspect-[4/3] flex items-center justify-center border border-plutto-200 overflow-hidden p-6">
-          <!-- Ilustraci&oacute;n: Tarjetas de proveedores procesadas en paralelo -->
-          <svg viewBox="0 0 260 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+        <div class="lg:col-span-2 bg-gradient-to-br from-plutto-100 via-plutto-50 to-white rounded-2xl aspect-[4/3] flex items-center justify-center border border-plutto-200 overflow-hidden p-6">
+          <!-- Ilustraci&oacute;n: Tarjetas de proveedores procesadas -->
+          <svg viewBox="0 0 220 190" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
             <!-- Tarjeta 1 — Verificado -->
-            <rect x="20" y="12" width="140" height="44" rx="10" fill="white" stroke="#D3CFF9" stroke-width="1.2"/>
-            <circle cx="46" cy="34" r="12" fill="#E2E2F0"/>
-            <rect x="66" y="26" width="52" height="5" rx="2.5" fill="#E2E2F0"/>
-            <rect x="66" y="36" width="36" height="4" rx="2" fill="#F3F4F6"/>
-            <circle cx="142" cy="34" r="8" fill="#5563E6" fill-opacity="0.12"/>
-            <path d="M138.5 34l2.5 2.5 5-5" stroke="#5563E6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="20" y="16" width="180" height="44" rx="10" fill="white" stroke="#D3CFF9" stroke-width="1.2"/>
+            <circle cx="46" cy="38" r="12" fill="#E2E2F0"/>
+            <rect x="66" y="30" width="68" height="5" rx="2.5" fill="#E2E2F0"/>
+            <rect x="66" y="40" width="44" height="4" rx="2" fill="#F3F4F6"/>
+            <circle cx="182" cy="38" r="8" fill="#5563E6" fill-opacity="0.12"/>
+            <path d="M178.5 38l2.5 2.5 5-5" stroke="#5563E6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <!-- Tarjeta 2 — Verificado -->
-            <rect x="40" y="68" width="140" height="44" rx="10" fill="white" stroke="#D3CFF9" stroke-width="1.2"/>
-            <circle cx="66" cy="90" r="12" fill="#E2E2F0"/>
-            <rect x="86" y="82" width="56" height="5" rx="2.5" fill="#E2E2F0"/>
-            <rect x="86" y="92" width="40" height="4" rx="2" fill="#F3F4F6"/>
-            <circle cx="162" cy="90" r="8" fill="#5563E6" fill-opacity="0.12"/>
-            <path d="M158.5 90l2.5 2.5 5-5" stroke="#5563E6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <!-- Tarjeta 3 — Procesando -->
-            <rect x="60" y="124" width="140" height="44" rx="10" fill="white" stroke="#E2E2F0" stroke-width="1.2"/>
-            <circle cx="86" cy="146" r="12" fill="#E2E2F0"/>
-            <rect x="106" y="138" width="48" height="5" rx="2.5" fill="#E2E2F0"/>
-            <rect x="106" y="148" width="32" height="4" rx="2" fill="#F3F4F6"/>
-            <circle cx="182" cy="146" r="8" fill="#FBBF24" fill-opacity="0.2"/>
-            <circle cx="182" cy="146" r="2.5" fill="#F59E0B"/>
-            <!-- Flecha de flujo -->
-            <path d="M220 40 L230 40 L230 146 L210 146" stroke="#D3CFF9" stroke-width="1.2" stroke-dasharray="4 3"/>
-            <path d="M214 142 L210 146 L214 150" stroke="#D3CFF9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <!-- Label -->
-            <text x="232" y="96" fill="#949AB8" font-size="7" font-family="Inter, sans-serif" transform="rotate(90 232 96)">en proceso</text>
+            <rect x="20" y="72" width="180" height="44" rx="10" fill="white" stroke="#D3CFF9" stroke-width="1.2"/>
+            <circle cx="46" cy="94" r="12" fill="#E2E2F0"/>
+            <rect x="66" y="86" width="76" height="5" rx="2.5" fill="#E2E2F0"/>
+            <rect x="66" y="96" width="52" height="4" rx="2" fill="#F3F4F6"/>
+            <circle cx="182" cy="94" r="8" fill="#5563E6" fill-opacity="0.12"/>
+            <path d="M178.5 94l2.5 2.5 5-5" stroke="#5563E6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Tarjeta 3 — En proceso -->
+            <rect x="20" y="128" width="180" height="44" rx="10" fill="white" stroke="#E2E2F0" stroke-width="1.2"/>
+            <circle cx="46" cy="150" r="12" fill="#E2E2F0"/>
+            <rect x="66" y="142" width="60" height="5" rx="2.5" fill="#E2E2F0"/>
+            <rect x="66" y="152" width="40" height="4" rx="2" fill="#F3F4F6"/>
+            <circle cx="182" cy="150" r="8" fill="#FBBF24" fill-opacity="0.2"/>
+            <circle cx="182" cy="150" r="2.5" fill="#F59E0B"/>
           </svg>
         </div>
       </div>
