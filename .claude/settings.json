@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__Claude_Preview__preview_start|mcp__Claude_Preview__preview_screenshot|mcp__Claude_Preview__preview_snapshot",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rsync -a --delete --exclude='.git' /Users/deboramarsalbarros/Desktop/Plutto/landing/ /tmp/plutto-landing/ && cat > /tmp/plutto_serve.py << 'PYEOF'\nimport http.server\nimport os\nos.chdir(\"/tmp/plutto-landing\")\nclass Handler(http.server.SimpleHTTPRequestHandler):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, directory=\"/tmp/plutto-landing\", **kwargs)\nhttp.server.HTTPServer((\"\", 3000), Handler).serve_forever()\nPYEOF"
+          }
+        ]
+      }
+    ]
+  }
+}

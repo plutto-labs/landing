@@ -2,10 +2,11 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "Node (npx serve)",
-      "runtimeExecutable": "/usr/bin/python3",
-      "runtimeArgs": ["/tmp/plutto_serve.py"],
-      "port": 3000
+      "name": "landing",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "--directory", "/Users/deboramarsalbarros/Desktop/Plutto/landing", "3000"],
+      "port": 3000,
+      "autoPort": true
     }
   ]
 }
