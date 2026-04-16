@@ -114,5 +114,6 @@ Plutto tiene una desconexión significativa entre su tracción comercial ($6.6M 
 
 ---
 
-*Plan de acción detallado con tareas semanales: ver `docs/seo/plan-semanal.md`*
+*Plan de acción detallado con tareas semanales: ver `docs/estrategia/plan-semanal.md`*
+*Ejecución del sprint actual: ver `docs/planes-sprint/`*
 *Design system y componentes: ver `docs/marca.md`*

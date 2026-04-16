@@ -2,6 +2,8 @@
 
 Landing page estática de [getplutto.com](https://getplutto.com). Deploy automático en Cloudflare Pages.
 
+> **Sprint actual (abril 2026):** La ejecución día a día vive en `docs/planes-sprint/` — 3 planes (blog, formularios+HubSpot, checklist técnico). Abrir ese README primero antes de ejecutar cualquier tarea.
+
 ## Stack técnico
 
 - HTML estático (sin framework, sin build)
@@ -20,11 +22,13 @@ templates/articulo.html Template completo para artículos educativos (AEO optimi
 assets/css/custom.css   Animaciones custom (fade-in)
 assets/js/main.js       Menú móvil + IntersectionObserver para animaciones scroll
 assets/img/             Imágenes (favicon, og-image, logos de clientes)
-docs/EMPIEZA-AQUI.md    Guía de inicio para marketing (leer primero)
+docs/planes-sprint/     Sprint actual — 5 planes (blog, forms+HubSpot, checklist, DNS, directorios). Fuente de verdad día a día
+docs/EMPIEZA-AQUI.md    Guía de inicio + setup inicial
 docs/plutto.md          Contexto del producto y palabras clave SEO
 docs/marca.md           Design system completo (colores, componentes, schema, reglas)
-docs/seo/               Auditoría, plan semanal, migración
+docs/estrategia/        Estrategia SEO/AEO de mediano plazo (plan-semanal, auditoría histórica)
 docs/templates/         Template de brief para páginas nuevas (llenar antes de crear)
+docs/contexto-rediseno-home.md  Mapeo de assets y decisiones del home (solo si tocas el home)
 _headers                Headers de seguridad para Cloudflare Pages
 _redirects              Reglas de redirección de Cloudflare Pages
 robots.txt              Configuración para crawlers

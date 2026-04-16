@@ -46,12 +46,12 @@ Dashboard: https://dash.cloudflare.com → Pages → plutto-landing
 
 | Documento | Contenido |
 |-----------|-----------|
+| [`docs/planes-sprint/`](docs/planes-sprint/README.md) | **Sprint actual — 5 planes (blog, forms+HubSpot, checklist, DNS, directorios). Fuente de verdad** |
 | [`docs/EMPIEZA-AQUI.md`](docs/EMPIEZA-AQUI.md) | Guía de inicio para marketing |
 | [`docs/plutto.md`](docs/plutto.md) | Contexto del producto y keywords SEO |
 | [`docs/marca.md`](docs/marca.md) | Design system (colores, componentes, schema, reglas) |
-| [`docs/seo/auditoria.md`](docs/seo/auditoria.md) | Diagnóstico SEO/AEO actual |
-| [`docs/seo/plan-semanal.md`](docs/seo/plan-semanal.md) | Plan de trabajo con tareas y briefs |
-| [`docs/seo/migracion.md`](docs/seo/migracion.md) | Plan migración Webflow → Cloudflare Pages |
+| [`docs/estrategia/auditoria.md`](docs/estrategia/auditoria.md) | Diagnóstico SEO/AEO histórico (marzo 2026) |
+| [`docs/estrategia/plan-semanal.md`](docs/estrategia/plan-semanal.md) | Estrategia SEO de mediano plazo (artículos pilar, competencia, briefs) |
 | [`docs/templates/brief-pagina.md`](docs/templates/brief-pagina.md) | Template para briefear páginas nuevas |
 
 ## Stack

@@ -1,25 +1,28 @@
 # Plan SEO y AEO — getplutto.com
-## Estrategia de contenido y posicionamiento
+## Estrategia de contenido y posicionamiento (mediano/largo plazo)
 
-> **Cómo usar este documento:**
-> Este archivo es la **estrategia SEO/AEO**: diagnóstico, keywords objetivo, prioridades de contenido, briefs de páginas, y análisis de competidores.
+> **Qué es este documento:**
+> Estrategia SEO/AEO de mediano/largo plazo — diagnóstico, keywords objetivo, briefs de artículos pilar, análisis de competidores, directrices de diseño para landings.
 >
-> El **tracker de ejecución** (qué está hecho, en qué fase estamos, qué sigue) está en [`docs/seo/migracion.md`](migracion.md).
+> **No es el plan de ejecución del sprint actual.** Para lo que Débora ejecuta **ahora**, ver [`docs/planes-sprint/`](../planes-sprint/README.md):
+> - Plan 1 — Migración del blog
+> - Plan 2 — Formularios + HubSpot
+> - Plan 3 — Checklist técnico
+> - Plan 4 — Corte de DNS
+> - Plan 5 — Directorios G2/Capterra/ComparaSoftware
 >
-> Usa `/siguiente-tarea` para que Claude te diga exactamente qué hacer ahora según el estado de la migración.
+> Este archivo es el **backlog estratégico** de lo que viene después: artículos pilar (`conceptos/que-es-kyb`, `kyc-vs-kyb`, etc.), expansión a inglés, prensa, directrices de diseño para cada landing nueva.
 
 ---
 
-## Mapa de tareas → Fases de migración
+## Mapa de trabajo
 
-| Tareas de este documento | Fase | Cuándo ejecutar |
-|--------------------------|------|-----------------|
-| G2, Capterra, ComparaSoftware (manuales) | **Paralelo** — no bloquea | Puedes hacerlo hoy mismo, no depende de la migración |
-| Artículos `conceptos/` y landings `soluciones/` | **Fase 3** | Después de que Fases 0 y 1 estén completas (diseño listo) |
-| Artículos de blog nuevos | **Fase 4** | Después de migrar el blog existente |
-| Industrias, inglés, prensa | **Fase 5+** | Mes 4 en adelante |
-
-> **Sobre los arreglos técnicos:** La versión anterior de este documento incluía tareas como "cambiar lang='en'", "agregar og:image" o "configurar robots.txt". **Esas tareas ya no aplican** — el sitio se está construyendo desde cero y todas esas optimizaciones están incluidas en los templates desde el día 1.
+| Tipo | Dónde vive |
+|---|---|
+| Ejecución del sprint actual | [`docs/planes-sprint/`](../planes-sprint/README.md) |
+| Estrategia y backlog futuro (este archivo) | Parte 1, 3, 4, 5 abajo |
+| Directrices de diseño para crear cualquier landing | Parte 3.5 abajo |
+| Diagnóstico histórico (marzo 2026) | [`auditoria.md`](auditoria.md) |
 
 ---
 
@@ -84,74 +87,13 @@ Los asistentes de IA (ChatGPT, Claude, Perplexity, Google AI Overviews) arman su
 
 ## Parte 2: Tareas de contenido y posicionamiento
 
-### Tareas paralelas — Perfiles en directorios de software
-
-> Estas tareas son **manuales** (se hacen en los sitios web de cada directorio, sin tocar código).
-> **No dependen de la migración** — puedes empezarlas hoy mismo mientras avanza la Fase 0.
-
-### Semana 3-4 — Perfiles en directorios de software
-
-Estas tareas son manuales (se hacen en los sitios web de cada directorio, sin código).
-
-#### Tarea 6: Crear perfil en G2
-**Etiqueta:** Manual (sin código)
-**Por qué:** G2 es LA fuente #1 que usan los asistentes de IA para recomendar software B2B. Si no estamos ahí, no existimos para ChatGPT ni Perplexity.
-
-- [ ] Ir a https://www.g2.com/products/new
-- [ ] Categoría: "Third-Party Risk Management Software" (buscar esta categoría exacta)
-- [ ] Completar estos campos:
-  - **Product name:** Plutto
-  - **Website:** https://getplutto.com
-  - **Description (corta):** Plataforma de evaluación y gestión de riesgo de terceros con IA. Automatiza due diligence, compliance regulatorio y monitoreo continuo de proveedores en Chile y Latinoamérica.
-  - **Description (larga):** Plutto ayuda a empresas a evaluar, aprobar y monitorear a sus terceros (proveedores, clientes, contrapartes) de forma automatizada. Usando inteligencia artificial, Plutto analiza documentos legales, consulta bases de datos regulatorias (SAT, SII, CMF, UAF), genera reportes de due diligence, y monitorea cambios en tiempo real. Fundada en 2020 y respaldada por Y Combinator (S22), Plutto es usada por empresas como Buda.com, Soprole, y Essbio para reducir hasta un 80% el tiempo de evaluación de terceros.
-  - **Categorías adicionales:** Compliance Software, Vendor Risk Management, Due Diligence Software
-  - **Logo:** Subir logo de Plutto
-  - **Screenshots:** Subir 3-5 capturas de la plataforma
-- [ ] Una vez creado, pedir a 5-10 clientes que dejen un review (esto es CRÍTICO — G2 prioriza productos con reviews)
-
-#### Tarea 7: Crear perfil en Capterra
-**Etiqueta:** Manual (sin código)
-
-- [ ] Ir a https://www.capterra.com/vendors/sign-up
-- [ ] Seguir el mismo approach que G2
-- [ ] Categoría: "Third-Party Risk Management" o "Compliance Software"
-- [ ] Usar las mismas descripciones de la Tarea 6
-- [ ] Pedir reviews a los mismos clientes
-
-#### Tarea 8: Crear perfil en ComparaSoftware
-**Etiqueta:** Manual (sin código)
-**Por qué:** Es el directorio #1 en Latinoamérica. Muchas búsquedas en español terminan ahí.
-
-- [ ] Ir a https://www.comparasoftware.com/
-- [ ] Buscar cómo registrar un producto (sección "Vendors" o "Proveedores")
-- [ ] Categoría: "Software de Compliance" o "Gestión de Proveedores"
-- [ ] Usar descripciones similares a G2 pero más enfocadas en LATAM
-
-#### Tarea 9: Solicitar reviews de clientes
-**Etiqueta:** Manual (sin código)
-**Por qué:** Los directorios sin reviews no sirven de nada. G2 y Capterra priorizan productos con más y mejores reviews. Los asistentes de IA también le dan más peso.
-
-- [ ] Hacer una lista de 10-15 clientes satisfechos (idealmente variados: banca, fintech, retail, etc.)
-- [ ] Enviar un email personalizado pidiendo que dejen un review en G2 y/o Capterra
-- [ ] Template sugerido:
-
-> Asunto: ¿Nos ayudas con un review rápido?
+> **Las tareas de directorios (G2, Capterra, ComparaSoftware) se movieron a [`../planes-sprint/5-directorios-g2-capterra.md`](../planes-sprint/5-directorios-g2-capterra.md)** porque son ejecución inmediata, no estrategia.
 >
-> Hola [nombre],
->
-> Estamos mejorando nuestra presencia online y nos ayudaría mucho tener tu experiencia reflejada en G2/Capterra. Son 5 minutos y nos hace una gran diferencia.
->
-> [Link directo al formulario de review]
->
-> ¡Gracias!
-> Felipe
-
-- [ ] Hacer follow-up a los 5-7 días con quienes no hayan respondido
-- [ ] Meta: al menos 5 reviews en G2 y 3 en Capterra en el primer mes
+> Lo que queda abajo son los artículos pilar y landings que son **backlog post-sprint** — se ejecutan una vez terminado el checklist técnico, el blog y los forms.
 
 ---
 
-### Fase 3 — Contenido pilar (artículos conceptos/)
+### Contenido pilar (artículos conceptos/)
 
 > Estas páginas se crean **después de que Fases 0 y 1 estén completas** (diseño y templates listos).
 > Todos se hacen con Claude — más abajo está el brief completo de cada uno.
@@ -1022,32 +964,11 @@ Estas 4 oportunidades son diferenciadores reales — se pueden implementar gradu
 
 ## Parte 4: Tareas que necesitan ingeniería
 
-Estas tareas NO las puedes hacer sola — requieren cambios de infraestructura que debe hacer el equipo de desarrollo.
-
-### 4.1 Migrar blog de subdominio a subdirectorio
-**Impacto:** ALTO
-**Qué pasa hoy:** El blog está en `blog.getplutto.com` (un subdominio). Google trata los subdominios como sitios separados, entonces toda la "autoridad" que gana el blog no beneficia al sitio principal.
-**Qué necesitamos:** Mover el blog a `getplutto.com/blog` (un subdirectorio). Así todo el SEO del blog suma al dominio principal.
-**Nota:** Esto requiere cambios en el servidor (Fly.io), configuración de DNS, y redirecciones 301 de todas las URLs antiguas.
-
-### 4.2 Bloquear instancia Fly.io duplicada
-**Impacto:** ALTO
-**Qué pasa hoy:** Existe `getplutto-blog.fly.dev` indexado por Google. Es una copia exacta del blog, lo que Google penaliza como "contenido duplicado".
-**Qué necesitamos:** Bloquear el acceso público a esa URL (con autenticación básica o redirección).
-
-### 4.3 Arreglar template roto del blog
-**Impacto:** MEDIO
-**Qué pasa hoy:** La URL `blog.getplutto.com/tag/[slug]` está indexada en Google (con los corchetes literales — es un template que nunca se configuró).
-**Qué necesitamos:** Eliminar esa página y agregar una regla `noindex` para que Google la desindexe.
-
-### 4.4 Verificar indexación en Google Search Console
-**Impacto:** Diagnóstico
-**Qué pasa hoy:** Las páginas /producto, /precios y /mexico posiblemente no están indexadas en Google (no aparecen en búsquedas `site:getplutto.com`).
-**Qué necesitamos:** Que alguien con acceso a Google Search Console verifique el estado de indexación y solicite indexación manual si es necesario.
-
-### 4.5 Ejecutar PageSpeed Insights
-**Impacto:** Diagnóstico
-**Qué hacer:** Ir a https://pagespeed.web.dev/ y probar getplutto.com en mobile y desktop. Anotar los scores y las recomendaciones principales. Esto lo puede hacer marketing, pero las correcciones probablemente necesiten ingeniería.
+> Las tareas de migración del blog y el corte DNS vivían aquí antes. Ahora están en:
+> - **Plan 1** — Migración del blog de subdomain a `/blog/`
+> - **Plan 4** — Corte de DNS (incluye bloqueo de `getplutto-blog.fly.dev` y limpieza de templates rotos tipo `/tag/[slug]`)
+>
+> Los diagnósticos de PageSpeed Insights y Google Search Console son parte de la verificación de Plan 3 (imágenes) y Plan 4 (post-corte).
 
 ---
 
@@ -1119,4 +1040,4 @@ HACER MES 4+:
 
 ---
 
-*Documento generado a partir del deep review SEO/AEO de getplutto.com (marzo 2026). Fuente técnica: docs/seo/auditoria.md*
+*Documento generado a partir del deep review SEO/AEO de getplutto.com (marzo 2026). Fuente técnica: `docs/estrategia/auditoria.md`*

@@ -61,7 +61,7 @@ Para cada página HTML, revisa:
 - [ ] Sección FAQ con schema `FAQPage` presente (mínimo 3 preguntas)
 - [ ] Tablas comparativas usan `<table>` nativo (no divs con grid) — AI engines las parsean mejor
 - [ ] Contenido cita fuentes externas autoritativas (reguladores, organismos oficiales)
-- [ ] La página responde al menos 1 pregunta del listado de keywords en `docs/seo/auditoria.md`
+- [ ] La página responde al menos 1 pregunta del listado de keywords en `docs/estrategia/auditoria.md`
 - [ ] Links internos a otros artículos/páginas del sitio (autoridad topical)
 
 ## Formato de salida

@@ -2,6 +2,8 @@
 
 Esta guía te explica cómo usar este repositorio para crear y editar páginas del sitio de Plutto usando Claude Code. No necesitas saber programar.
 
+> **¿Ya estás en medio del sprint actual?** Ve directo a **[`docs/planes-sprint/README.md`](./planes-sprint/README.md)** — ahí están los 3 planes que tienes que seguir (blog, formularios+HubSpot, checklist técnico). Este archivo es solo setup inicial y referencia.
+
 ---
 
 ## 1. Setup Inicial (una sola vez)
@@ -100,17 +102,18 @@ Dashboard: https://dash.cloudflare.com -> Pages -> plutto-landing
 
 ---
 
-## 4. Orden de Tareas SEO
+## 4. Orden de Tareas del Sprint Actual
 
-Sigue el plan semanal en `docs/seo/plan-semanal.md`. Resumen:
+La fuente de verdad del sprint actual es **[`docs/planes-sprint/`](./planes-sprint/)**. Cinco planes:
 
-| Cuándo | Qué hacer | Tipo |
-|--------|-----------|------|
-| **Semana 1-2** | Arreglos técnicos (lang, og:image, schema, robots.txt) | Con Claude |
-| **Semana 3-4** | Perfiles G2, Capterra, ComparaSoftware + pedir reviews | Manual |
-| **Mes 2** | 4 artículos pilar (KYB, KYC vs KYB, regulaciones, DD) | Con Claude |
-| **Mes 3** | Landing pages solución + FAQ | Con Claude |
-| **Mes 4+** | Landing por industria + contenido inglés + prensa | Mixto |
+1. **Plan 3 (fases 1-2)** — Quick wins + optimización de imágenes
+2. **Plan 2** — Formularios + HubSpot + crear `/demo`
+3. **Plan 3 (fases 3-5)** — Limpieza CSS, industrias diferenciadas, páginas legales
+4. **Plan 1** — Migración del blog (iterativo, en paralelo con el resto)
+5. **Plan 4** — Corte de DNS (último, cuando todo lo anterior esté listo)
+6. **Plan 5** — Directorios G2/Capterra/ComparaSoftware (100% manual, se puede hacer en paralelo desde hoy)
+
+Para estrategia SEO de mediano plazo (artículos pilar, keywords, competencia) ver `docs/estrategia/plan-semanal.md`.
 
 ---
 
@@ -177,11 +180,12 @@ landing/
 
 | Documento | Cuándo leerlo |
 |-----------|---------------|
+| **`docs/planes-sprint/`** | **Ejecución del sprint actual (5 planes). Fuente de verdad día a día** |
 | `docs/marca.md` | Antes de crear o editar cualquier página. Contiene el design system completo |
 | `docs/plutto.md` | Para entender el producto, keywords SEO, y audiencia |
-| `docs/seo/plan-semanal.md` | Para saber qué tarea hacer y en qué orden |
-| `docs/seo/auditoria.md` | Para entender el diagnóstico actual y por qué hacemos esto |
-| `docs/seo/migracion.md` | Cuando toque migrar el blog de subdominio a subdirectorio |
+| `docs/estrategia/plan-semanal.md` | Estrategia SEO/AEO de mediano plazo: keywords, briefs de artículos pilar, competencia |
+| `docs/estrategia/auditoria.md` | Diagnóstico SEO/AEO histórico (contexto, no plan de acción) |
+| `docs/contexto-rediseno-home.md` | Mapeo de assets y decisiones del home (solo si tocas el home) |
 | `docs/templates/brief-pagina.md` | Cada vez que crees una página nueva |
 
 ---

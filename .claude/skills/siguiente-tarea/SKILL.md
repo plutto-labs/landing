@@ -1,114 +1,68 @@
 ---
 name: siguiente-tarea
-description: Te dice exactamente qué hacer a continuación según el estado de la migración y el plan SEO.
+description: Te dice exactamente qué hacer a continuación según el estado de los planes de sprint.
 ---
 
-Determina la siguiente tarea a ejecutar leyendo el estado actual de la migración y respetando los gates de fase.
+Determina la siguiente tarea a ejecutar leyendo los 5 planes de sprint en `docs/planes-sprint/`.
 
 ## Pasos
 
-### 1. Leer el estado de la migración
+### 1. Leer el estado actual
 
-Lee `docs/seo/migracion.md` completo. Es la fuente de verdad.
+Lee en orden:
+1. `docs/planes-sprint/README.md` — mapa y orden recomendado
+2. Los 5 planes: `1-migracion-blog.md`, `2-formularios-hubspot.md`, `3-checklist-tecnico.md`, `4-corte-dns.md`, `5-directorios-g2-capterra.md`
 
-Para cada fase (0 al 5), determina su estado:
-- **Bloqueada** 🔴: tiene tareas en 🔴 Pendiente
-- **En progreso** 🟡: tiene mezcla de 🟡 y 🔴
-- **Completa** 🟢: todas las tareas en 🟢 Completado
+Identifica para cada plan cuáles tareas están marcadas hechas (el usuario debe ir agregando ✅ o fechas a medida que completa).
 
-### 2. Identificar la fase activa
+### 2. Orden de prioridad
 
-La fase activa es la primera fase que NO está completa (🟢).
+Respetar el orden recomendado del README:
+1. **Plan 5** — ejecución manual en paralelo desde día 1 (G2, Capterra, ComparaSoftware)
+2. **Plan 3 fases 1-2** — quick wins + imágenes
+3. **Plan 2** — formularios + HubSpot + `/demo`
+4. **Plan 3 fases 3-5** — CSS, industrias, páginas legales
+5. **Plan 1** — migración del blog (iterativo, puede correr en paralelo)
+6. **Plan 4** — corte DNS (solo cuando 1, 2, 3 estén ✅)
 
-### 3. Aplicar gate de fase
+### 3. Decidir siguiente tarea
 
-**Gate estricto:** No se puede avanzar a la siguiente fase hasta completar la actual.
+- Si Plan 3 fases 1-2 tiene tareas pendientes → esas primero
+- Si Plan 2 no tiene `/demo` creado → prioridad máxima (CTA roto hoy)
+- Plan 5 puede hacerse en cualquier momento si Débora tiene tiempo manual disponible
+- Plan 4 solo se muestra si los 3 planes principales están ✅
 
-| Fase activa | Qué mostrar | Qué NO mostrar |
-|-------------|-------------|----------------|
-| Fase 0 | Tareas de Fase 0 (pedir brand-guide, referentes, definir diseño) | Nada de fases siguientes |
-| Fase 1 | Tareas de Fase 1 (templates, CSS) | Ninguna página de contenido |
-| Fase 2 | Tareas de Fase 2 (páginas base) | Landings SEO ni artículos |
-| Fase 3 | Tareas de Fase 3 + prioridad desde plan-semanal.md | Blog ni DNS |
-| Fase 4 | Tareas de Fase 4 (blog) | DNS cutover |
-| Fase 5 | Checklist pre-launch y DNS | — |
-
-**Excepción:** Las tareas de directorios (G2, Capterra, ComparaSoftware) son paralelas — siempre mostrarlas si están pendientes, sin importar la fase activa.
-
-### 4. Si la fase activa es 0 o 1 (diseño)
-
-Mostrar este mensaje especial:
+### 4. Mostrar el resultado
 
 ```
-🚧 Gate activo: diseño no definido
-════════════════════════════════════
-Antes de crear cualquier página, necesitamos tener el diseño listo.
-
-Estado de la migración:
-  Fase 0 — Definición Visual: [estado]
-  Fase 1 — Sistema de Diseño: [estado]
-
-👉 Siguiente tarea: [primera tarea pendiente de la fase activa]
-
-[Si Fase 0 activa]:
-  Necesito que me compartas:
-  1. El brand-guide en PDF (adjúntalo en el chat)
-  2. URLs o imágenes de sitios de referencia visual
-
-[Si Fase 1 activa]:
-  Tengo el diseño definido en docs/marca.md.
-  Ejecuta: /nueva-seccion [o el skill correspondiente]
-```
-
-### 5. Si la fase activa es 2, 3, 4 o 5
-
-Escanear qué archivos ya existen:
-- `index.html`, `demo.html`, `mexico.html`, `preguntas-frecuentes.html`
-- `soluciones/*.html`, `conceptos/*.html`, `blog/*.html`
-- `sitemap.xml` (para confirmar páginas publicadas)
-
-Cruzar contra las tareas pendientes en `migracion.md`.
-
-Para Fase 3: consultar `docs/seo/plan-semanal.md` para ordenar las páginas pendientes por prioridad SEO (keywords sin competencia local van primero).
-
-### 6. Mostrar el resultado
-
-```
-📊 Estado de la migración
+📊 Estado de los planes de sprint
 ══════════════════════════════════════════
 
-  Fase 0 — Definición Visual:    🟢 Completa
-  Fase 1 — Sistema de Diseño:    🟢 Completa
-  Fase 2 — Páginas Base:         🟡 En progreso (3/7 completadas)
-  Fase 3 — Landings + Conceptos: 🔴 Pendiente
-  Fase 4 — Blog:                 🔴 Pendiente
-  Fase 5 — DNS Cutover:          🔴 Pendiente
-
-Paralelo (sin bloqueo de fase):
-  ⬚ Perfil en G2 — requiere acción manual
-  ⬚ Perfil en Capterra — requiere acción manual
-  ⬚ Perfil en ComparaSoftware — requiere acción manual
+Plan 1 — Blog:            [estado, N/M tareas hechas]
+Plan 2 — Forms + HubSpot: [estado]
+Plan 3 — Checklist:       [estado]
+Plan 4 — Corte DNS:       [estado, bloqueado si Planes 1-3 no están listos]
+Plan 5 — Directorios:     [estado — manual, paralelo]
 
 ══════════════════════════════════════════
-👉 Siguiente tarea (Fase 2): [nombre de tarea]
+👉 Siguiente tarea (Plan X, Fase Y): [nombre tarea]
 
-   [Descripción breve de qué es y por qué]
-   Ejecuta: /nueva-pagina [o el comando exacto]
-
-   Después: /publicar
+   [Descripción breve + por qué es la siguiente]
+   Archivos a tocar: [rutas]
+   Después: commit + /publicar
 ```
 
-### 7. Si el usuario quiere otra tarea
+### 5. Si el usuario pide otra tarea
 
-- "ya lo hice" → avanzar a la siguiente pendiente de la misma fase
-- "quiero elegir" → mostrar todas las tareas pendientes de la fase activa con comando para cada una
-- "quiero ver todo" → mostrar el estado completo de todas las fases
+- "ya lo hice" → avanzar a la siguiente pendiente del mismo plan
+- "quiero elegir" → mostrar todas las tareas pendientes de todos los planes desbloqueados
+- "quiero ver todo" → resumen de los 5 planes con conteo pendientes
 
 ## Reglas
 
-- Siempre leer `migracion.md` primero — nunca asumir estado desde conversaciones anteriores
-- Actualizar el estado en `migracion.md` cuando el usuario confirme que completó una tarea
-- Las tareas de directorios (G2, Capterra) son manuales — indicar el link y pasos, no hay skill para ejecutarlas
+- Siempre leer los planes de `docs/planes-sprint/` — nunca asumir estado desde conversaciones anteriores
+- No inventar tareas que no estén en los planes
+- Respetar bloqueos: si el Plan 2 requiere alineación con JP (tarea 1), no mostrar tareas posteriores del mismo plan hasta confirmar
 - Siempre terminar con el comando exacto a ejecutar y el flujo post-creación: `/publicar`
-- No inventar tareas que no estén en `migracion.md` o `plan-semanal.md`
-- Si hay ambigüedad sobre si una tarea está completa, verificar que el archivo HTML existe Y está en `sitemap.xml`
+- Decisiones marcadas "Felipe debe resolver" en cada plan bloquean las tareas que dependen de ellas — señalar al usuario cuando corresponda
+- Para contexto estratégico (keywords, artículos pilar futuros) remitir a `docs/estrategia/plan-semanal.md` — no es parte del sprint actual

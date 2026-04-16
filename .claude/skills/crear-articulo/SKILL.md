@@ -16,7 +16,7 @@ Si no se proporciona argumento, pregunta que articulo quiere crear el usuario.
 
 1. Copia `templates/articulo.html` como base
 2. Lee `docs/plutto.md` para contexto del producto y palabras clave SEO
-3. Lee `docs/seo/plan-semanal.md` para ver si el articulo esta en el plan
+3. Lee `docs/estrategia/plan-semanal.md` para ver si el articulo esta en el plan
 
 ## Proceso de creacion
 

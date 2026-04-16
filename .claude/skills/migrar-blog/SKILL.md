@@ -7,12 +7,12 @@ Migra artículos del blog en subdomain (blog.getplutto.com) al directorio `/blog
 
 ## Contexto
 
-Lee `docs/seo/migracion.md` para el plan completo de migración. El blog actual en subdomain diluye la autoridad del dominio principal — Google trata subdominios como sitios separados.
+Lee `docs/planes-sprint/1-migracion-blog.md` para el plan completo de migración. El blog actual en subdomain diluye la autoridad del dominio principal — Google trata subdominios como sitios separados.
 
 ## Pasos
 
 ### 1. Leer el plan de migración
-- Lee `docs/seo/migracion.md` para entender la estrategia
+- Lee `docs/planes-sprint/1-migracion-blog.md` para entender la estrategia y el flujo paso a paso
 - Lee `docs/marca.md` para patrones de componentes
 - Lee `docs/plutto.md` para keywords
 
