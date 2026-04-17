@@ -94,7 +94,7 @@ git push origin master
 - No modificar `_headers` sin autorización explícita
 
 ### Colores y diseño
-- Color primario: `plutto-600` (#3d3bf3). **Nunca usar indigo-600**
+- Color primario: `plutto-600` (#5563E6). **Nunca usar indigo-600**
 - Tanto `index.html` como los templates ya usan plutto-600
 - No usar dark mode (no agregar clases `dark:`)
 - Font: Inter. No agregar otras fuentes
