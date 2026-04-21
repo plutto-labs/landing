@@ -12,7 +12,7 @@ Que la landing **no se vea "generada por IA"**: más fondos de marca, imágenes 
 
 ### Hero (estilo ruixen-ui)
 - Layout 50/50 con `flex-col lg:flex-row` y `min-h-[90vh]`
-- **Imagen**: `assets/img/fotos producto/hero-producto.webp` (dashboard DD real) dentro de feature showcase card (`bg-white/80 backdrop-blur-sm border rounded-2xl shadow-lg`)
+- **Imagen**: `assets/img/fotos-producto/hero-producto.webp` (dashboard DD real) dentro de feature showcase card (`bg-white/80 backdrop-blur-sm border rounded-2xl shadow-lg`)
 - Card incluye screenshot `aspect-video` + 4 features con checkmark SVGs
 - Badge con dot indicator + borde (`bg-plutto-100/80 border border-plutto-200`)
 - Heading: "Escala tu evaluación de **terceros**" (acento `text-plutto-600`)
@@ -23,7 +23,7 @@ Que la landing **no se vea "generada por IA"**: más fondos de marca, imágenes 
 
 ### Sección Problema (pain points)
 - Layout asimétrico: 1 card grande oscura `bg-plutto-900` (5 cols) + 3 cards horizontales `.card-lift` (7 cols)
-- Card principal: dato estadístico + `orbitas plutto.png` decorativo
+- Card principal: dato estadístico + `orbitas-plutto.png` decorativo
 - Fondo: `fondo 2.png` (lavanda) + órbitas sutiles
 
 ### Logo bar — Sin cambios
@@ -31,34 +31,34 @@ Que la landing **no se vea "generada por IA"**: más fondos de marca, imágenes 
 
 ### Testimonios
 - Fondo: `fondo 3.png` órbitas a 50% con gradiente overlay
-- 3 estrellas `Vector plutto.png` decorativas
+- 3 estrellas `vector-plutto.png` decorativas
 - Spacing `py-16 sm:py-20`
 - **BUG PENDIENTE**: JS del carrusel (`window.testimonialPrev/Next`) nunca se registra. Flechas no funcionan. Posible causa: error silencioso antes del código en main.js o script faltante
 
 ### Producto (tabs de módulos)
 - **5 screenshots reales** reemplazaron TODOS los placeholders SVG:
-  - Debida Diligencia → `plutto 1.png`
-  - Onboarding KYB → `plutto 2.png`
-  - Screening Continuo → `plutto 4.png`
-  - Expedientes → `plutto 5.png`
-  - API e Integraciones → `plutto 3.png`
+  - Debida Diligencia → `plutto-1.png`
+  - Onboarding KYB → `plutto-2.png`
+  - Screening Continuo → `plutto-4.png`
+  - Expedientes → `plutto-5.png`
+  - API e Integraciones → `plutto-3.png`
 - Spacing `py-28`
 
 ### Proceso (cómo funciona)
 - Fondo: `fondo 4.png` azul oscuro con órbitas a 60%
 - Timeline con línea conectora animada `.timeline-line` (CSS `scaleX`)
 - Círculos `rounded-full` + `ring-4` (antes eran cuadrados `rounded-2xl`)
-- 2 estrellas Vector plutto con `filter: brightness(2)`
+- 2 estrellas vector-plutto con `filter: brightness(2)`
 
 ### Audiencias (para quién es)
-- Fondo: `fondo 2.png` + `orbitas plutto.png` sutil + 3 estrellas
+- Fondo: `fondo 2.png` + `orbitas-plutto.png` sutil + 3 estrellas
 - Cards con `.card-lift` (hover translateY -4px + sombra plutto)
 - Spacing `py-24`
 
 ### CTA final
 - Fondo: `Fondo 1.png` gradiente azul→cyan a 70% (protagonista)
 - Texto `lg:text-6xl`
-- 3 estrellas Vector plutto con brillo
+- 3 estrellas vector-plutto con brillo
 - Botón hover lift + sombra blanca
 - Spacing `py-36 sm:py-40`
 
@@ -79,18 +79,18 @@ Que la landing **no se vea "generada por IA"**: más fondos de marca, imágenes 
 | `fondo 2.png` | Gradiente blanco → lavanda | Problema, Audiencias |
 | `fondo 3.png` | Lavanda con líneas de órbitas | Hero (30%), Testimonios (50%) |
 | `fondo 4.png` | Azul oscuro con órbitas | Proceso (60%) |
-| `orbitas plutto.png` | Círculos concéntricos (negro) | Problema card, Audiencias (invert) |
-| `Vector plutto.png` | Estrella 4 puntas plutto | Decorativo en 5 secciones |
+| `orbitas-plutto.png` | Círculos concéntricos (negro) | Problema card, Audiencias (invert) |
+| `vector-plutto.png` | Estrella 4 puntas plutto | Decorativo en 5 secciones |
 
 ### Fotos de producto
 | Archivo | Contenido | Usado en |
 |---------|-----------|----------|
 | `hero-producto.webp` | Dashboard DD real con actividad | Hero card |
-| `plutto 1.png` | Verificación tributaria + alertas | Tab: Debida Diligencia |
-| `plutto 2.png` | Flujo de solicitud con etapas | Tab: Onboarding KYB |
-| `plutto 3.png` | Diagrama áreas conectadas | Tab: API e Integraciones |
-| `plutto 4.png` | Fuentes datos (SII, Equifax, CMF) | Tab: Screening Continuo |
-| `plutto 5.png` | Mapa conflicto de interés | Tab: Expedientes |
+| `plutto-1.png` | Verificación tributaria + alertas | Tab: Debida Diligencia |
+| `plutto-2.png` | Flujo de solicitud con etapas | Tab: Onboarding KYB |
+| `plutto-3.png` | Diagrama áreas conectadas | Tab: API e Integraciones |
+| `plutto-4.png` | Fuentes datos (SII, Equifax, CMF) | Tab: Screening Continuo |
+| `plutto-5.png` | Mapa conflicto de interés | Tab: Expedientes |
 
 ---
 
