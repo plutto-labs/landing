@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects
+# Sintaxis: <from>  <to>  <status>
+
+# /sobre-plutto renombrado a /nosotros/ (2026-04-22)
+/sobre-plutto  /nosotros/  301
+/sobre-plutto/  /nosotros/  301
